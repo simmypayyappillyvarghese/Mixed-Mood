@@ -1,7 +1,8 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
+//Uncomment once the route files are created
+// const routes = require('./controllers');
 
 // const helpers = require('./utils/helpers'); NOT YET USING
 
@@ -22,7 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(routes);
+//Uncomment once the route files are created
+// app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

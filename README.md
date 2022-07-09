@@ -28,6 +28,15 @@ GIVEN a vibez web application with search options
 
 ### Technologies/Packages Used
 
+
+* PACKAGES
+
+    * EXPRESS
+    * EXPRESS-HANDLEBARS
+    * SEQUELIZE
+    * MYSQL2
+    * BCRYPT
+
 <br>
 
 ### Links
