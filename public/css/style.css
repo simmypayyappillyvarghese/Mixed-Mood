@@ -6,9 +6,10 @@
 :root{
 
     --primary-color:#8CBDB9;
-    --secondary-color:#E09E50;
+    --button-color:#E09E50;
     --text-color:#2D3E4E;
     --light-color:#E8ECEB;
+    --error-color:#D0312D;
 }
 
 a,a:hover,a.activer{
@@ -35,7 +36,6 @@ body{
 h1{
     letter-spacing: 5px;
     text-transform: uppercase;
-    margin-top: 10px;
     font-family: Splash,'Times New Roman', Times, serif;
 }
 
@@ -55,7 +55,7 @@ form{
 
 .btn{
 
-    background-color: var(--secondary-color);
+    background-color: var(--button-color);
 }
 
 footer{

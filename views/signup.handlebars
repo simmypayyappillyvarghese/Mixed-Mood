@@ -2,13 +2,19 @@
     <form class="d-flex flex-column p-5">
         <div class="mb-4">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-4">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" class="form-control" id="signup-password">
              </div>
-        <button type="submit" class="btn">Sign Up</button>
+        <button type="submit" class="btn" id="signup-button">Sign Up</button>
+        <br>
+         <div><small class="error-message text-danger"></small></div>
     </form>
 </div>
+ {{#unless logged_in}}
+        <script src="./js/signup.js"></script>
+{{/unless}}
+    
