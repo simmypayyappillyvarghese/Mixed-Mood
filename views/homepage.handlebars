@@ -1,7 +1,10 @@
-<div>
-    <!--TEST-->
-   <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-  </div>
+<div class="pt-5 pb-5">
+<div class="search" data-search>
+  <label for="search" class="search-label">search</label>
+  <input id="search" class="search-input" data-search-input>
+  <button class="search-control" data-search-control aria-label="clear search"></button>
 </div>
+</div>
+ {{#if logged_in}}
+<script src="/js/search-box.js"></script>
+{{/if}}

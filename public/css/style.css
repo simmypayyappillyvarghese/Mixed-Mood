@@ -27,7 +27,6 @@ body{
     font-family:Roboto,'Times New Roman', Times, serif;
     background: url('../images/music-app-background-image-3.jpg') no-repeat center center/cover fixed ;
     color:var(--light-color) !important;
-    padding:1rem;
     
 }
 
@@ -62,3 +61,96 @@ footer{
 
     padding-bottom: 3rem;
 }
+
+/*search Box STyling*/
+.search {
+    position: relative;
+  }
+  .search.is-search-open .search-input {
+    width: 300px;
+    color: #fff;
+  }
+  .search.is-search-open .search-input ~ .search-control {
+    z-index: 0;
+    cursor: pointer;
+  }
+  .search.is-search-open .search-input ~ .search-control::before {
+    transform: rotate(45deg);
+  }
+  .search.is-search-open .search-input ~ .search-control::after {
+    transform: rotate(-45deg) translateY(0);
+  }
+  
+  .search-label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  .search-input {
+    width: 55px;
+    height: 55px;
+    padding: 10px 15px;
+    border: 4px solid #fff;
+    border-radius: 99px;
+    background: transparent;
+    color: transparent;
+    font-size: 2rem;
+    transition: 0.4s width ease, 0.4s color ease;
+  }
+  .search-input:focus {
+    outline: none;
+  }
+  
+  .search-control {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: 15px;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    transform: translateY(-50%);
+  }
+  .search-control::before, .search-control::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 42%;
+    width: 4px;
+    height: 100%;
+    border-radius: 99px;
+    background: #fff;
+    transition: 0.4s transform cubic-bezier(0.17, 0.67, 0.48, 1.34);
+    content: "";
+  }
+  .search-control::before {
+    transform: rotate(45deg) translateY(-25px) scaleY(0.01);
+  }
+  .search-control::after {
+    transform: rotate(-45deg) translateY(37px);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #000;
+  }
