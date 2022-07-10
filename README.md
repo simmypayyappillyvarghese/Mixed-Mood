@@ -33,6 +33,8 @@ GIVEN a vibez web application with search options
 
     * EXPRESS
     * EXPRESS-HANDLEBARS
+    * EXPRESS-SESSION
+    * CONNECT SESSION SEQUELIZE
     * SEQUELIZE
     * MYSQL2
     * BCRYPT

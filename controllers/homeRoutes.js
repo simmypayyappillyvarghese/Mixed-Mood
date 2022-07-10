@@ -9,3 +9,13 @@ router.get('/', (req, res) => {
   
     res.render('login');
   });
+
+
+router.get('/sign-up',(req,res)=>{
+
+    res.render('signup');
+})  
+
+
+
+  module.exports = router;

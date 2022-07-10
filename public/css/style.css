@@ -24,7 +24,7 @@ a,a:hover,a.activer{
 body{
 
     font-family:Roboto,'Times New Roman', Times, serif;
-    background: url('./music-app-background-image-3.jpg') no-repeat center center/cover fixed ;
+    background: url('../images/music-app-background-image-3.jpg') no-repeat center center/cover fixed ;
     color:var(--light-color) !important;
     padding:1rem;
     
