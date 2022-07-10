@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+
+    --primary-color:#8CBDB9;
+    --secondary-color:#E09E50;
+    --text-color:#2D3E4E;
+    --light-color:#E8ECEB;
+}
+
+a,a:hover,a.activer{
+
+    text-decoration:underline;
+    color:var(--text-color);
+    text-align: center;
+    padding-bottom:7px;
+    text-shadow: 1px 1px var(--light-color);
+}
+
+
+body{
+
+    font-family:Roboto,'Times New Roman', Times, serif;
+    background: url('../images/music-app-background-image-3.jpg') no-repeat center center/cover fixed ;
+    color:var(--light-color) !important;
+    padding:1rem;
+    
+}
+
+
+
+h1{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-family: Splash,'Times New Roman', Times, serif;
+}
+
+
+#form-container{
+
+    height:100vh;
+}
+
+
+form{
+
+    background-color: var(--primary-color);
+    color:var(--text-color);
+    border-radius: 6%;
+}
+
+.btn{
+
+    background-color: var(--secondary-color);
+}
+
+footer{
+
+    padding-bottom: 3rem;
+}
