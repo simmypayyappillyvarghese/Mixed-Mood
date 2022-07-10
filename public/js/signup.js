@@ -1,31 +1,54 @@
+const emailValidator=(input)=>{
 
-const email=document.querySelector('#signup-email');
-const password=document.querySelector('#signup-password');
 
-const signUpHandler = async () => {  
-  const response = await fetch('/api/user/signup', {
-    method: 'POST',
-    body:JSON.stringify({email,password}),
-    headers: { 'Content-Type': 'application/json' },
-  });
+    return input.match(/^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/);
 
-  console.log(`${userData.email} signed up`);
-  if (response.ok) {
-    document.location.replace('/home');
-  } else {
-    alert(response.statusText);
-  }
+}
+
+const signUpHandler = async (event) => {  
+    event.preventDefault();
+
+    const email=document.querySelector('#signup-email').value.trim();
+    const password=document.querySelector('#signup-password').value.trim();
+    const error_message=document.querySelector('.error-message');
+    const errorMessage=document.querySelector('.error-message');
+
+    let validInput=true;
+    error_message.innerHTML=``;
+        //Email and Password Validation
+
+        if(!emailValidator(email)){
+
+            errorMessage.innerHTML=`Email is not valid.Please try again.`+"<br>";
+            validInput=false;
+        }
+
+        if(password.length<8){
+
+            errorMessage.innerHTML+=`Password is not valid(min length:8).Please try again`;
+            validInput=false;
+        }
+
+   if(validInput){
+
+    const response = await fetch('/api/user/signup', {
+        method: 'POST',
+        body:JSON.stringify({email,password}),
+        headers: { 'Content-Type': 'application/json' },
+      });
+    
+    
+      if (response.ok) {
+        document.location.replace('/home');
+      } else {
+        alert(response.statusText);
+      }
+
+   }
+  
+   return;
 };
 
 document.querySelector('#signup-button').addEventListener('click',signUpHandler);
 
 
-// const renderSignUp = ()=>{
-
-  
-//         document.location.replace('/signup');
-   
-
-// }
-
-// document.querySelector('.sign-up-link').addEventListener(click,renderSignUp);

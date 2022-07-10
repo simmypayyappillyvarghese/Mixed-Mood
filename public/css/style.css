@@ -36,7 +36,6 @@ body{
 h1{
     letter-spacing: 5px;
     text-transform: uppercase;
-    margin-top: 10px;
     font-family: Splash,'Times New Roman', Times, serif;
 }
 
@@ -62,11 +61,4 @@ form{
 footer{
 
     padding-bottom: 3rem;
-}
-
-.error-message{
-
-    display: none;
-    color:var(--error-color);
-    font-size:10px;
 }

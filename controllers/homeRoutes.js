@@ -26,13 +26,17 @@ router.get('/', (req, res) => {
   })
 
 
+  //Application will be routed when the user clicks on the signup link
+  
   router.get('/signup',(req,res)=>{
 
+    //If user is  logged in redirect to /home
     if (req.session.logged_in) {
       res.redirect('/home');
       return;
     }
 
+    //If user is  not logged in render signup
     res.render('signup',{logged_in: req.session.logged_in });
   })
 
