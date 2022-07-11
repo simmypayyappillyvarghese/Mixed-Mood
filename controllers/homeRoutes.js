@@ -1,5 +1,9 @@
 
 const router = require('express').Router();
+<<<<<<< HEAD
+=======
+const {Song}=require('../models');
+>>>>>>> 8b4f44cc7be18c585cfceaef2d59f6da498dab6b
 
 router.get('/', (req, res) => {
 
@@ -39,6 +43,41 @@ router.get('/', (req, res) => {
     //If user is  not logged in render signup
     res.render('signup',{logged_in: req.session.logged_in });
   })
+
+
+  router.get('/search/:searchText',async(req,res)=>{
+
+    try{
+
+      const searchValue=req.params.searchText;
+  
+   
+  const searchData=await Song.findAll({
+      attributes:['media_url'],
+      where:{
+          artist_name:searchValue
+      }
+  });
+
+  console.log(searchData);
+
+  //Serializing the Search Data
+  const songs=searchData.map((data)=>{return data.get({plain:true})});
+
+  console.log(songs);
+  // if(searchData){
+     
+    
+     res.render('homepage',{songs});
+  // }
+  // else{
+  // res.status(400).json({message:"Failed to fetch the data"});
+  // }
+}
+catch(e){console.log(e);}
+
+});
+
 
 
 

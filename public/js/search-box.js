@@ -29,7 +29,15 @@ searchControlElement.addEventListener('click', () => {
 
 async function changeHandler(){
 
+
     console.log(searchInputElement.value);
     const response=await fetch('/api/user/')
 }
+    const searchText=searchInputElement.value;
+    if(searchText){
+
+      window.location.replace(`/search/${searchText}`);
+    }
+
+
 searchInputElement.addEventListener('change',changeHandler);

@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
-const Library = require("./Library");
+
+const sequelize = require("../config/connection")
+
 
 class Library extends Model {}
 
@@ -14,10 +15,19 @@ Library.init({
   user_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    references: {
+      model: 'user',
+      key: 'id',
+    }
   },
   song_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    references: {
+        model: 'song',
+        key: 'id',
+      }
+
   },
 },
 {

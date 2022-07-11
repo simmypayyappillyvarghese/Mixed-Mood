@@ -26,6 +26,20 @@ GIVEN a vibez web application with search options
 
 <br>
 
+
+ROUTES:
+
+App Route /Root Route
+
+http://localhost:3001/         :  Directs the Page to Starting Page of Application with Login Form
+http://localhost:3001/home     :  Directs the Page to Home Page ,When user enter the login button with their credentials.
+                                  If user is not logged in direct to the root page woth login form
+
+http://localhost:3001/signup   :  Directs the Page to SignUp form Page ,When user clicks the signup link in root page(http://localhost:3001/ )
+http://localhost:3001/signup   :  If User enter credential and enter Submit Button ,Directs the Page to Home Page(http://localhost:3001/home) wih logout button
+                                
+
+# Test 
 ### Technologies/Packages Used
 
 
@@ -33,6 +47,8 @@ GIVEN a vibez web application with search options
 
     * EXPRESS
     * EXPRESS-HANDLEBARS
+    * EXPRESS-SESSION
+    * CONNECT SESSION SEQUELIZE
     * SEQUELIZE
     * MYSQL2
     * BCRYPT
