@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const {User}=require('../../models');
 
+
+
+
+
  //On route /signup,user will user will be created  with the passed email and password
 
 router.post('/signup', async (req, res) => {

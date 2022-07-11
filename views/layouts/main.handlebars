@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="/css/style.css" /> 
 </head>
 <body class="container-fluid">
-    <main  class="container-fluid d-flex flex-column align-items-center justify-content-evenly" id="form-container">
-        <nav class="container-fluid align-self-start d-flex justify-content-between px-6">
+    <main  class="container-fluid d-flex flex-column align-items-center justify-content-start py-5" id="form-container">
+        <nav class="container-fluid align-self-start d-flex justify-content-between px-6 py-3">
             <h6>LOGO</h6>
           {{#if logged_in}}
             <button class="btn" id="logout">Logout</button>
           {{/if}}
         </nav>
-            <h1>Mixed-Mood</h1>
+            <h1 class="my-0">Mixed-Mood</h1>
         {{{body}}}
         <footer>
             <small>Mixed-Moods @ 2014 All Rights Reserved | Privacy</small>

@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
+
 const sequelize = require("../config/connection")
+
 
 class Library extends Model {}
 
@@ -14,9 +16,9 @@ Library.init({
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-        model: 'user',
-        key: 'id',
-      },
+      model: 'user',
+      key: 'id',
+    }
   },
   song_id: {
     type: DataTypes.INTEGER,
@@ -24,7 +26,8 @@ Library.init({
     references: {
         model: 'song',
         key: 'id',
-      },
+      }
+
   },
 },
 {
