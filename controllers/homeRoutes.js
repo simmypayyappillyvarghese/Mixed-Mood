@@ -51,7 +51,7 @@ router.get('/', (req, res) => {
       const searchValue=req.params.searchText;
   
   const searchData=await Song.findAll({
-      attributes:['media_url'],
+      attributes:['media_url','media_image'],
       where:{
           artist_name:searchValue
       }
@@ -63,7 +63,7 @@ router.get('/', (req, res) => {
   //Serializing the Search Data
    const songs=searchData.map((data)=>{return data.get({plain:true})});
 
-     res.render('homepage',{songs});
+     res.render('homepage',{songs,logged_in:req.session.logged_in});
   }
 
   else{
