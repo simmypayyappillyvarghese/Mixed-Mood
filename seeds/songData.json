@@ -1,0 +1,12 @@
+[
+    {
+      "song_title":"A view from the Vale",
+      "album_name":"glass violet",
+      "artist_name":"test",
+       "genre":"country",
+       "mood":"happy",
+       "media_url":"https://res.cloudinary.com/dw5h7wsq9/video/upload/v1657500568/Glass_Violet_-_A_View_From_The_Vale_njbqwk.mp3",
+       "media_image":"https://res.cloudinary.com/dw5h7wsq9/image/upload/v1657500668/music_image_1_pqynx0.avif"
+
+    }
+]    
