@@ -1,3 +1,5 @@
+ <!--Font Awesome Icon-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="pt-5 pb-5">
 <div class="search" data-search>
   <label for="search" class="search-label">search</label>
@@ -5,18 +7,30 @@
   <button class="search-control" data-search-control aria-label="clear search"></button>
 </div>
 </div>
-
-<div>
+<div class="container-fluid d-flex justify-content-center align-items-center px-5 flex-wrap-sm" id="library-playlist-container">
+  <div class="px-5 mx-5 bg-secondary" id="library-container">
+      My Library
+  </div>
+  <ul class="list-group px-5 mx-5" id="playlist-container">
   {{#each songs as |song|}}
-    <div>
-
-      <audio controls>
+  <li class="list-group-item d-flex align-items-center justify-content-evenly">
+  <img src={{song.media_image}} alt="Media Image" id="media-image">  
+  {{!-- <p>{{song.title}}</p> --}}
+  <audio controls>
   <source src={{song.media_url}} type="audio/ogg">
   <source src={{song.media_url}}  type="audio/mpeg">
-Your browser does not support the audio element.
+  Your browser does not support the audio element.
 </audio>
-    </div>
+  <div class="list-icons d-flex align-items-center justify-content-between mx-5 px-5">
+    <i class="fa fa-heart">Save</i>
+    <i class="fa fa-play">Play</i>
+    <i class="fa fa-volume-up">Vol</i>
+    <i class="fa fa-align-left">Lyrics</i>
+  </div>
+</li>
   {{/each}}
+  </ul>
+ 
 </div>
 
  {{#if logged_in}}

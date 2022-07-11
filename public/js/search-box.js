@@ -27,17 +27,21 @@ searchControlElement.addEventListener('click', () => {
 });
 
 
-async function changeHandler(){
+
+async function searchHandler(){
 
 
     console.log(searchInputElement.value);
-    const response=await fetch('/api/user/')
-}
+   
+
     const searchText=searchInputElement.value;
     if(searchText){
 
       window.location.replace(`/search/${searchText}`);
     }
 
+    //TO DO else handler
+}
 
-searchInputElement.addEventListener('change',changeHandler);
+
+searchInputElement.addEventListener('change',searchHandler);
