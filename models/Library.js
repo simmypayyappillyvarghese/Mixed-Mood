@@ -14,10 +14,18 @@ Library.init({
   user_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    references: {
+      model: 'user',
+      key: 'id',
+    }
   },
   song_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    references: {
+      model: 'song',
+      key: 'id',
+    }
   },
 },
 {
