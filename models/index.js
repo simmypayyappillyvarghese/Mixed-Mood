@@ -1,9 +1,7 @@
 
 const User=require('./User');
-
 const Song=require('./Song');
 const Library=require('./Library');
-
 
 
 
@@ -16,7 +14,7 @@ User.belongsToMany(Song,{
     as:'user_song_list'
   });
   
- 
+
   
   Song.belongsToMany(User,{
   
@@ -28,4 +26,3 @@ User.belongsToMany(Song,{
   });
 
 module.exports={User,Song,Library};
-

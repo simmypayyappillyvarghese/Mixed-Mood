@@ -6,6 +6,7 @@
 </div>
 </div>
 <div>
+  {{#unless error}}
   {{#each songs as |song|}}
     <div>
 
@@ -16,6 +17,12 @@ Your browser does not support the audio element.
 </audio>
     </div>
   {{/each}}
+  {{/unless}}
+   {{#if error}}
+      <div>
+        No Results Found
+      </div>
+   {{/if}}
 </div>
  {{#if logged_in}}
 <script src="/js/search-box.js"></script>

@@ -41,13 +41,15 @@ router.get('/', (req, res) => {
     res.render('signup',{logged_in: req.session.logged_in });
   })
 
+
+  //SEARCH ROUTE
+
   router.get('/search/:searchText',async(req,res)=>{
 
     try{
 
       const searchValue=req.params.searchText;
   
-   
   const searchData=await Song.findAll({
       attributes:['media_url'],
       where:{
@@ -55,20 +57,19 @@ router.get('/', (req, res) => {
       }
   });
 
-  console.log(searchData);
+  
+  if(searchData){
 
   //Serializing the Search Data
-  const songs=searchData.map((data)=>{return data.get({plain:true})});
+   const songs=searchData.map((data)=>{return data.get({plain:true})});
 
-  console.log(songs);
-  // if(searchData){
-     
-    
      res.render('homepage',{songs});
-  // }
-  // else{
-  // res.status(400).json({message:"Failed to fetch the data"});
-  // }
+  }
+
+  else{
+    const error={"message":"No data found"};
+    res.render('homepage',{error});
+  }
 }
 catch(e){console.log(e);}
 
