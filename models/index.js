@@ -27,4 +27,4 @@ User.belongsToMany(Song,{
     as:'song_of_users'
   });
 
-module.exports={User};
+module.exports={User,Song,Library};

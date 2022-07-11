@@ -5,6 +5,18 @@
   <button class="search-control" data-search-control aria-label="clear search"></button>
 </div>
 </div>
+<div>
+  {{#each songs as |song|}}
+    <div>
+
+      <audio controls>
+  <source src={{song.media_url}} type="audio/ogg">
+  <source src={{song.media_url}}  type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+    </div>
+  {{/each}}
+</div>
  {{#if logged_in}}
 <script src="/js/search-box.js"></script>
 {{/if}}
