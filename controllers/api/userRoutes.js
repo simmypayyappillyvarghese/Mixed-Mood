@@ -1,19 +1,12 @@
 const router = require('express').Router();
 const {User}=require('../../models');
 
-
-
-
-
  //On route /signup,user will user will be created  with the passed email and password
 
 router.post('/signup', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
-    console.log(req.body);
-    //ADD Validation for email
-    console.log(userData);
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;

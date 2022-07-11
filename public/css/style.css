@@ -27,6 +27,10 @@ body{
     font-family:Roboto,'Times New Roman', Times, serif;
     background: url('../images/music-app-background-image-3.jpg') no-repeat center center/cover fixed ;
     color:var(--light-color) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
     
 }
 
@@ -147,10 +151,24 @@ footer{
     height: 100%;
   }
   
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    background: #000;
+ 
+
+  #library-container{
+
+    flex:20% 1 1;
+  }
+  #playlist-container{
+
+    flex:60% 1 2;
+  }
+
+  .list-icons i{
+
+    padding: 0.6rem;
+  }
+
+  #media-image{
+
+    width:50px;
+
   }
