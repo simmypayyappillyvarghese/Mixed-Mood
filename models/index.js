@@ -1,16 +1,29 @@
 
-const User=require('./User');
-const Library=require('./Library')
-const Song=require('./Song')
-//Add the relation between the tables
-Song.belongsToMany(User,{
-    through: Library,
-  })
+const Song=require('./Song');
+const Library=require('./Library');
 
-Library.hasOne(User)
 
-User.hasMany(Song, {
-  through:Library,
-})
+
+User.belongsToMany(Song,{
+
+    through:{
   
-module.exports={User,Library,Song};
+        model:Library,
+    },
+    as:'user_song_list'
+  });
+  
+ 
+  
+  Song.belongsToMany(User,{
+  
+    through:{
+  
+        model:Library,
+    },
+    as:'song_of_users'
+  });
+
+module.exports={User,Song,Library};
+
+
