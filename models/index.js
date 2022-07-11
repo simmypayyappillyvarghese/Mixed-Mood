@@ -6,6 +6,11 @@ const Song=require('./Song')
 Song.belongsToMany(User,{
     through: Library,
   })
+
 Library.hasOne(User)
+
+User.hasMany(Song, {
+  through:Library,
+})
   
 module.exports={User,Library,Song};
