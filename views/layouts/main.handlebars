@@ -18,24 +18,6 @@
   <header class="container-fluid  d-flex flex-column  align-self-center justify-content-between px-6 py-3">
     <nav class="container-fluid align-self-start d-flex justify-content-between px-6 py-3">
             <h6>LOGO</h6>
-    
-  <div class="btn-group">
-    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" />
-    <label class="btn btn-dark" for="option1">😠</label>
-
-    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
-    <label class="btn btn-dark" for="option2">😀</label>
-
-    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" />
-    <label class="btn btn-dark" for="option3">💖</label>
-
-    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" />
-    <label class="btn btn-dark" for="option4">💪🏻</label>
-
-    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" />
-    <label class="btn btn-dark" for="option5">😔</label>
-  </div>
-
             <h1 class="my-0">Mixed-Mood</h1>
           {{#if logged_in}}
             <button class="btn" id="logout">Logout</button>
@@ -51,7 +33,7 @@
   <footer class="py-0">
             <small>Mixed-Moods @ 2014 All Rights Reserved | Privacy</small>
   </footer>
-    <script src="/js/script.js"></script>
+    
      {{#if logged_in}}
       <script src="/js/logout.js"></script>
        {{/if}}
