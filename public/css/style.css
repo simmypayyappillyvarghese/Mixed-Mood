@@ -158,11 +158,11 @@ form{
 
   #library-container{
 
-    flex:30% 1 1;
+    flex:35% 1 1;
   }
   #playlist-container{
 
-    flex:70% 1 2;
+    flex:65% 1 2;
   }
 
   #playlist-container li{
@@ -203,22 +203,16 @@ form{
     padding-right: 0;
   }
 
-  /* #audio-container{
-
-    position: absolute;
-    bottom: 3rem;
-  } */
 
 
   footer{
 
-    /* position: fixed; */
-    /* bottom: 1rem; */
     padding-bottom: 3rem;
     margin:3rem;
   }
 
-  /* Radio Button */
-.btn-group{
-  margin-top: 20px;
-}
+  .btn-group{
+
+    margin-top:20px;
+  }
+ 

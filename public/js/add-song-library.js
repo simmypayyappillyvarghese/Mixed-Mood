@@ -9,7 +9,10 @@ async function addSongToLibrary(event){
       if(event.target.classList.contains('fa-heart')){
        
         const songId=event.target.parentElement.parentElement.dataset.id;
-    
+       
+        // event.target
+        event.target.style.color='#CD5C5C';
+
         const response=await fetch('/api/user/saveSong',
         {
             method:'POST',
@@ -22,7 +25,7 @@ async function addSongToLibrary(event){
         if(response.ok){
 
             console.log("To do -Display the Success Message");
-            window.location.replace('/home/save');
+            window.location.replace('/home');
         }
         }
         else{
