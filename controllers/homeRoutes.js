@@ -51,7 +51,7 @@ router.get('/', (req, res) => {
       const searchValue=req.params.searchText;
   
   const searchData=await Song.findAll({
-      attributes:['media_url','media_image'],
+      attributes:['id','song_title','album_name','artist_name','media_url','media_image'],
       where:{
           artist_name:searchValue
       }

@@ -1,40 +1,50 @@
  <!--Font Awesome Icon-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!--Search Box Component-->
+
 <div class="pt-5 pb-5">
- Search Music 
 <div class="search" data-search>
-  <label for="search" class="search-label">search</label>
+  <label for="search" class="search-label">Search For Your Favorites</label>
   <input id="search" class="search-input" data-search-input>
   <button class="search-control" data-search-control aria-label="clear search"></button>
 </div>
 </div>
-<div class="container-fluid d-flex justify-content-center align-items-center px-5 flex-wrap-sm" id="library-playlist-container">
-  <div class="px-5 mx-5 bg-secondary" id="library-container">
+
+<!--Library & Playlist Component-->
+<div class="container-fluid d-flex justify-content-center align-items-center px-4 flex-wrap-md" id="library-playlist-container">
+  <div class="px-5 mx-5" id="library-container">
       My Library
   </div>
-  <ul class="list-group px-5 mx-5" id="playlist-container">
+  <ul class="list-group px-3 mx-3" id="playlist-container">
+    <h6>Playlist</h6>
   {{#each songs as |song|}}
-  <li class="list-group-item d-flex align-items-center justify-content-evenly">
+  <li class="list-group-item d-flex align-items-center justify-content-between" data-media={{song.media_url}} data-id={{song.id}} id="music-list">
   <img src={{song.media_image}} alt="Media Image" id="media-image">  
-  {{!-- <p>{{song.title}}</p> --}}
-  <audio controls>
-  <source src={{song.media_url}} type="audio/ogg">
-  <source src={{song.media_url}}  type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-  <div class="list-icons d-flex align-items-center justify-content-between mx-5 px-5">
-    <i class="fa fa-heart">Save</i>
-    <i class="fa fa-play">Play</i>
-    <i class="fa fa-volume-up">Vol</i>
-    <i class="fa fa-align-left">Lyrics</i>
+  <div class="d-flex align-items-center justify-content-start flex-wrap-md" id="song-details">
+  <span class="text-dark">{{song.song_title}}</span>
+  <span class="text-dark">- {{song.album_name}}</span>
+  <span class="text-dark">,{{song.artist_name}}</span>
+  </div>
+  <div class="list-icons d-flex align-items-center justify-content-between">
+    <i class="fa fa-heart" id="save-icon"> Save</i>
+    <i class="fa fa-play" id="play-icon"> Play</i>
+    <i class="fa fa-align-left" id="lyrics-icon"> Lyrics</i>
   </div>
 </li>
   {{/each}}
   </ul>
- 
 </div>
 
- {{#if logged_in}}
+<!--Audio Element Componet-->
+<div class="container-fluid d-flex justify-content-center align-items-center px-4 flex-wrap-md" id="audio-container">
+  <audio  id="audio-element" controls>
+  <source type="audio/ogg" id="audio-source">
+  Your browser does not support the audio element.
+ </audio>
+</div>
+
+{{#if logged_in}}
 <script src="/js/search-box.js"></script>
+<script src="/js/play-song.js"></script>
 {{/if}}
