@@ -14,21 +14,25 @@
 
   <link rel="stylesheet" href="/css/style.css" /> 
 </head>
-<body class="container-fluid">
-    <main  class="container-fluid d-flex flex-column align-items-center justify-content-start py-5" id="form-container">
-        <nav class="container-fluid align-self-start d-flex justify-content-between px-6 py-3">
+<body class="container-fluid  d-flex flex-column  align-self-center justify-content-between px-6 py-0">
+  <header class="container-fluid  d-flex flex-column  align-self-center justify-content-between px-6 py-3">
+    <nav class="container-fluid align-self-start d-flex justify-content-between px-6 py-3">
             <h6>LOGO</h6>
+            <h1 class="my-0">Mixed-Mood</h1>
           {{#if logged_in}}
             <button class="btn" id="logout">Logout</button>
           {{/if}}
-        </nav>
-            <h1 class="my-0">Mixed-Mood</h1>
-        {{{body}}}
-        <footer>
+          {{#unless logged_in}}
+            <button class="btn bg-transparent" id="logout"></button>
+          {{/unless}}
+    </nav>
+  </header>
+  <main  class="container-fluid d-flex flex-column align-items-center justify-content-start" id="form-container">
+      {{{body}}}
+  </main>
+  <footer class="py-0">
             <small>Mixed-Moods @ 2014 All Rights Reserved | Privacy</small>
-        </footer>
-    </main>
- 
+  </footer>
     <script src="/js/script.js"></script>
      {{#if logged_in}}
       <script src="/js/logout.js"></script>

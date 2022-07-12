@@ -1,6 +1,7 @@
 
 const router = require('express').Router();
 const {Song}=require('../models');
+const {Op}=require('sequelize');
 
 router.get('/', (req, res) => {
 
@@ -28,7 +29,7 @@ router.get('/', (req, res) => {
 
 
   //Application will be routed when the user clicks on the signup link
-  
+
   router.get('/signup',(req,res)=>{
 
     //If user is  logged in redirect to /home
@@ -42,7 +43,7 @@ router.get('/', (req, res) => {
   })
 
 
-  //SEARCH ROUTE
+  //SEARCH ROUTE-Based on the Artist Name
 
   router.get('/search/:searchText',async(req,res)=>{
 
@@ -51,10 +52,13 @@ router.get('/', (req, res) => {
       const searchValue=req.params.searchText;
   
   const searchData=await Song.findAll({
-      attributes:['media_url','media_image'],
+      attributes:['id','song_title','album_name','artist_name','media_url','media_image'],
       where:{
-          artist_name:searchValue
-      }
+          artist_name:
+          {
+            [Op.like]:`%${searchValue}%`
+          }
+        }
   });
 
   
@@ -74,8 +78,6 @@ router.get('/', (req, res) => {
 catch(e){console.log(e);}
 
 });
-
-
 
 
 

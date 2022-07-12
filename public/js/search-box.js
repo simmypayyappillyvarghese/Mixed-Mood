@@ -27,14 +27,21 @@ searchControlElement.addEventListener('click', () => {
 });
 
 
+
 async function searchHandler(){
+
+
+    console.log(searchInputElement.value);
+   
 
     const searchText=searchInputElement.value;
     if(searchText){
 
       window.location.replace(`/search/${searchText}`);
     }
+
     //TO DO else handler
 }
+
 
 searchInputElement.addEventListener('change',searchHandler);
