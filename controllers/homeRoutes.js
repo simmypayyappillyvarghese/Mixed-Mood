@@ -3,7 +3,7 @@ const router = require('express').Router();
 const {Song, User , Library}=require('../models');
 const {Op}=require('sequelize');
 
-let songs;
+
 
 router.get('/', (req, res) => {
 
@@ -19,15 +19,15 @@ router.get('/', (req, res) => {
 
 
 
-  router.get('/home',(req,res)=>{
+  // router.get('/home',(req,res)=>{
 
-    if (!req.session.logged_in) {
-      res.redirect('/');
-      return;
-    }
+  //   if (!req.session.logged_in) {
+  //     res.redirect('/');
+  //     return;
+  //   }
 
-    res.render('homepage',{logged_in: req.session.logged_in });
-  })
+  //   res.render('homepage',{logged_in: req.session.logged_in });
+  // })
 
 
   //Application will be routed when the user clicks on the signup link
@@ -67,9 +67,13 @@ router.get('/', (req, res) => {
   if(searchData){
 
   //Serializing the Search Data
-    songs=searchData.map((data)=>{return data.get({plain:true})});
+    const songs=searchData.map((data)=>{return data.get({plain:true})});
+     req.session.save(()=>{
 
-     res.render('homepage',{songs,logged_in:req.session.logged_in});
+      req.session.songs=songs
+      res.render('homepage',{songs,logged_in:req.session.logged_in,parsedSongList:req.session.playlist});
+     });
+     
   }
 
   else{
@@ -81,26 +85,45 @@ catch(e){console.log(e);}
 
 });
 
-//Get Library Data Route
+//Get all the Song data based on the user id logged in by joining with the through table Library
 
-router.get('/home/save',async(req,res)=>{
+router.get('/home',async(req,res)=>{
 
-const userData=await Library.findAll({
+const userData=await User.findAll({
 
-  attributes: ['song_id'],
-  // include:[{model:Song,through:Library,as:'user_song_list'}],
-  //join with Library,grab all song ids from it
+  include:[{
+    model:Song,
+    through:Library,
+    as:'user_song_list',
+    attributes:['artist_name','album_name','media_image','song_title','media_url']
+  } 
+  ],
   where:{
-    user_id:req.session.user_id
+    id:req.session.user_id
   }
-})
+});
 
-const songList=userData.map(data=>data.get({plain:true}));
+console.log("----------------------------");
+console.log(userData);
+
+const songList=userData.map((data)=>data.get({plain:true}));
+
+
+console.log("-----------------------------");
+
+
 console.log(songList);
+console.log(songList[0].user_song_list);
+const parsedSongList=songList[0].user_song_list;
+
+
 if(userData){
 
-  //Should I pass songs as well here ?
-  res.render('homepage',{songList,songs}); //array of song ids
+  req.session.save(()=>{
+    req.session.playlist=parsedSongList
+    res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
+  });
+  
 }
 
 });
