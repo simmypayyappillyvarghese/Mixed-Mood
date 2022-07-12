@@ -27,29 +27,21 @@ searchControlElement.addEventListener('click', () => {
 });
 
 
-async function changeHandler(){
 
-    // console.log(searchInputElement.value);
-    // const artist_name=searchInputElement.value;
-    //   const response = await fetch('/api/search', {
-    //     method: 'POST',
-    //     body:JSON.stringify({artist_name}),
-    //     headers: { 'Content-Type': 'application/json' },
-    //   });
-    //   console.log(response);
-    //   if (response.ok) {
-    //   //  document.location.replace('/home');
-        
-    //     console.log("Succesful fetch");
-    //   } else {
-    //     alert(response.statusText);
-    //   }
+async function searchHandler(){
+
+
+    console.log(searchInputElement.value);
+   
 
     const searchText=searchInputElement.value;
     if(searchText){
 
       window.location.replace(`/search/${searchText}`);
     }
+
+    //TO DO else handler
 }
 
-searchInputElement.addEventListener('change',changeHandler);
+
+searchInputElement.addEventListener('change',searchHandler);

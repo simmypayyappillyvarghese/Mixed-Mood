@@ -26,7 +26,15 @@ body{
 
     font-family:Roboto,'Times New Roman', Times, serif;
     background: url('../images/music-app-background-image-3.jpg') no-repeat center center/cover fixed ;
+    /* background: #000; */
     color:var(--light-color) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    /* height:100vh; */
+    
     
 }
 
@@ -57,10 +65,7 @@ form{
     background-color: var(--button-color);
 }
 
-footer{
 
-    padding-bottom: 3rem;
-}
 
 /*search Box STyling*/
 .search {
@@ -82,17 +87,16 @@ footer{
   }
   
   .search-label {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+   
+    font-style:italic;
+    letter-spacing: 1.4px;
+    color: #e5edf1;
+    font-size: 0.8rem;
   }
   
   .search-input {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     padding: 10px 15px;
     border: 4px solid #fff;
     border-radius: 99px;
@@ -108,10 +112,10 @@ footer{
   .search-control {
     position: absolute;
     z-index: -1;
-    top: 50%;
+    top: 48%;
     right: 15px;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     padding: 0;
     border: none;
     background: transparent;
@@ -142,15 +146,74 @@ footer{
     box-sizing: border-box;
   }
   
-  html,
-  body {
-    height: 100%;
+  #library-container, #playlist-container{
+    /* min-height:100vh; */
+    background-color: var(--primary-color);
+    opacity: 0.8;
+    border-radius: 10px; 
+    padding: 3px;
+    color: var(--text-color);
+
   }
-  
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    background: #000;
+
+  #library-container{
+
+    flex:30% 1 1;
+  }
+  #playlist-container{
+
+    flex:70% 1 2;
+  }
+
+  #playlist-container li{
+
+    margin-bottom: 0.3rem;
+    border-radius: 10px;
+    
+  }
+  .list-icons i{
+
+    padding: 0.6rem;
+    cursor: pointer;
+  }
+
+  #media-image{
+
+    width:50px;
+
+  }
+
+  #audio-element{
+
+    display: none;
+    width:50%; 
+  }
+
+  #song-details span{
+
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 1rem;
+    text-transform: capitalize;
+  }
+
+  #song-details span:nth-child(2){
+
+    font-style: italic;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  /* #audio-container{
+
+    position: absolute;
+    bottom: 3rem;
+  } */
+
+
+  footer{
+
+    /* position: fixed; */
+    /* bottom: 1rem; */
+    padding-bottom: 3rem;
+    margin:3rem;
   }

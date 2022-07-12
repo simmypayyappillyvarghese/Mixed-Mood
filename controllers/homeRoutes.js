@@ -1,6 +1,7 @@
 
 const router = require('express').Router();
 const {Song}=require('../models');
+const {Op}=require('sequelize');
 
 router.get('/', (req, res) => {
 
@@ -28,7 +29,7 @@ router.get('/', (req, res) => {
 
 
   //Application will be routed when the user clicks on the signup link
-  
+
   router.get('/signup',(req,res)=>{
 
     //If user is  logged in redirect to /home
@@ -41,40 +42,42 @@ router.get('/', (req, res) => {
     res.render('signup',{logged_in: req.session.logged_in });
   })
 
+
+  //SEARCH ROUTE-Based on the Artist Name
+
   router.get('/search/:searchText',async(req,res)=>{
 
     try{
 
       const searchValue=req.params.searchText;
   
-   
   const searchData=await Song.findAll({
-      attributes:['media_url'],
+      attributes:['id','song_title','album_name','artist_name','media_url','media_image'],
       where:{
-          artist_name:searchValue
-      }
+          artist_name:
+          {
+            [Op.like]:`%${searchValue}%`
+          }
+        }
   });
 
-  console.log(searchData);
+  
+  if(searchData){
 
   //Serializing the Search Data
-  const songs=searchData.map((data)=>{return data.get({plain:true})});
+   const songs=searchData.map((data)=>{return data.get({plain:true})});
 
-  console.log(songs);
-  // if(searchData){
-     
-    
-     res.render('homepage',{songs});
-  // }
-  // else{
-  // res.status(400).json({message:"Failed to fetch the data"});
-  // }
+     res.render('homepage',{songs,logged_in:req.session.logged_in});
+  }
+
+  else{
+    const error={"message":"No data found"};
+    res.render('homepage',{error});
+  }
 }
 catch(e){console.log(e);}
 
 });
-
-
 
 
 

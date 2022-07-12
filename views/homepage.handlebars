@@ -1,95 +1,57 @@
-<section class="border p-4 mb-4 d-flex align-items-center flex-column">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Navbar brand -->
-      <a class="navbar-Profile" href="#">Brand</a>
+ <!--Font Awesome Icon-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <!-- Toggle button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
+<!--Search Box Component-->
 
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <!-- Navbar dropdown -->
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-mdb-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <!-- Dropdown menu -->
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Song</a></li>
-              <li><a class="dropdown-item" href="#">Artist</a></li>
-              <li><hr class="dropdown-divider" /></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <!-- Left links -->
-
-        <!-- Search form -->
-        <div class="input-group ps-5">
-          <div id="navbar-search-autocomplete" class="form-outline">
-            <input type="search" id="form1" class="form-control" />
-            <label class="form-label" for="form1">Search</label>
-          </div>
-          <button type="button" class="btn btn-primary">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-      <!-- Collapsible wrapper -->
-    </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
-</section>
 <div class="pt-5 pb-5">
 <div class="search" data-search>
-  <label for="search" class="search-label">search</label>
+  <label for="search" class="search-label">Search For Your Favorites</label>
   <input id="search" class="search-input" data-search-input>
   <button class="search-control" data-search-control aria-label="clear search"></button>
 </div>
 </div>
-<div>
-  {{#each songs as |song|}}
-    <div>
 
-      <audio controls>
-  <source src={{song.media_url}} type="audio/ogg">
-  <source src={{song.media_url}}  type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+<!--Library & Playlist Component-->
+<div class="container-fluid d-flex flex-column align-items-center justify-content-between">
+<div class="container-fluid d-flex justify-content-center align-items-start px-4 flex-wrap-sm my-2" id="library-playlist-container">
+  <div class="px-5 mx-5 my-2" id="library-container">
+      My Library
+  </div>
+  <ul class="list-group px-3 mx-3" id="playlist-container">
+    <div class="d-flex align-items-center justify-content-between flex-wrap p-3">
+      <h6>Playlist</h6>
+      <i class="fa fa-refresh"></i>
     </div>
+  {{#each songs as |song|}}
+  <li class="list-group-item d-flex align-items-center justify-content-between" data-media={{song.media_url}} data-id={{song.id}} id="music-list">
+  <img src={{song.media_image}} alt="Media Image" id="media-image">  
+  <div class="d-flex align-items-start justify-content-betwen flex-wrap-md" id="song-details">
+  <span class="text-dark">{{song.song_title}}</span>
+  <span class="text-dark">{{song.album_name}}</span>
+  <span class="text-dark">{{song.artist_name}}</span>
+  </div>
+  <div class="list-icons d-flex align-items-center justify-content-between">
+    <i class="fa fa-heart" class="save-icon"> Save</i>
+    <i class="fa fa-play" class="play-icon"> Play</i>
+    <i class="fa fa-align-left" class="lyrics-icon"> Lyrics</i>
+  </div>
+</li>
   {{/each}}
+  </ul>
 </div>
- {{#if logged_in}}
+  <!--Audio Element Componet-->
+<div class="container-fluid d-flex justify-content-center align-items-end px-4 flex-wrap my-5 py-5" id="audio-container">
+  <audio  id="audio-element" controls>
+  <source type="audio/ogg" id="audio-source">
+  Your browser does not support the audio element.
+ </audio>
+</div>
+
+</div>
+
+
+
+{{#if logged_in}}
 <script src="/js/search-box.js"></script>
+<script src="/js/play-song.js"></script>
 {{/if}}
