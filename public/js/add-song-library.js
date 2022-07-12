@@ -9,7 +9,10 @@ async function addSongToLibrary(event){
       if(event.target.classList.contains('fa-heart')){
        
         const songId=event.target.parentElement.parentElement.dataset.id;
-    
+       
+        // event.target
+        event.target.style.color='#CD5C5C';
+
         const response=await fetch('/api/user/saveSong',
         {
             method:'POST',

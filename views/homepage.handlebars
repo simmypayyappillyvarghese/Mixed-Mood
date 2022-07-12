@@ -1,9 +1,29 @@
  <!--Font Awesome Icon-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<div class="d-flex align-items-center justify-content-between px-5 mx-5 mb-3">
+<!--Radio Button-->
+ <div class="btn-group px-5">
+    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off"/>
+    <label class="btn btn-dark" for="option1">😠</label>
+
+    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+    <label class="btn btn-dark" for="option2">😀</label>
+
+    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" />
+    <label class="btn btn-dark" for="option3">💖</label>
+
+    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" />
+    <label class="btn btn-dark" for="option4">💪🏻</label>
+
+    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" />
+    <label class="btn btn-dark" for="option5">😔</label>
+  </div>
+
+
 <!--Search Box Component-->
 
-<div class="pt-5 pb-5">
+<div class="py-5 px-5">
 <div class="search" data-search>
   <label for="search" class="search-label">Search For Your Favorites</label>
   <input id="search" class="search-input" data-search-input>
@@ -11,13 +31,27 @@
 </div>
 </div>
 
+</div>
+
+
+
 <!--Library  Component-->
 <div class="container-fluid d-flex flex-column align-items-center justify-content-between">
 <div class="container-fluid d-flex justify-content-center align-items-start px-4 flex-wrap-sm my-2" id="library-playlist-container">
-  <div class="p-3 mx-5 my-2" id="library-container">
-      My Library
+  <div class="px-3  py-2 mx-5 my-2" id="library-container">
+      <h6>My Library</h6>
       <div class="song-list-container">
-        {{songList}}
+        <ul class="mt-4">
+        {{#each parsedSongList as |songList|}}
+        <li class="list-group-item py-2">
+          <div class="d-flex align-items-center justify-content-between flex-wrap-md">
+              <img src={{songList.media_image}} alt="Media Image" id="media-image">  
+              <span class="text-dark">{{songList.song_title}}</span>
+              <small class="text-dark">{{songList.artist_name}}</small>
+            </div>
+        </li>
+        {{/each}}
+        </ul>
       </div>
   </div>
 
@@ -53,14 +87,6 @@
  </audio>
 </div>
 
-</div>
-<!--test-->
-
-<div>
-
-  {{#each data as |d|}}
-  {{d.song_id}}
-  {{/each}}
 </div>
 
 
