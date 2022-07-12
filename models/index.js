@@ -11,7 +11,6 @@ User.belongsToMany(Song,{
     as:'user_song_list'
   });
   
-
   Song.belongsToMany(User,{
   
     through:{
