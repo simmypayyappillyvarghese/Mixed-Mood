@@ -2,9 +2,9 @@
 const router = require('express').Router();
 const {Song}=require('../../models');
 
-// router.post('/', async(req, res) => {
-    
-//    );
+router.post('/', async(req, res) => {
+
+});
 
 
 
