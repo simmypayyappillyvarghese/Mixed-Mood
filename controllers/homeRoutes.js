@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-const {Song}=require('../models');
+const {Song, User}=require('../models');
 const {Op}=require('sequelize');
 
 router.get('/', (req, res) => {
@@ -79,7 +79,25 @@ catch(e){console.log(e);}
 
 });
 
+//Get Library Data Route
 
+router.get('/save',async(req,res)=>{
+
+const userData=await User.findAll({
+
+  attributes: [song_id],
+  where:{
+    user_id:req.session.user_id
+  }
+})
+
+const data=userData.map(data=>data.get({plain:true}));
+if(userData){
+
+  res.render('homepage',{songs,logged_in:req.session.logged_in,data});
+}
+
+});
 
 
 
