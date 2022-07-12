@@ -31,8 +31,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    height:100vh;
+    margin: 1rem;
+    padding: 1rem;
+    /* height:100vh; */
+    
     
 }
 
@@ -63,10 +65,7 @@ form{
     background-color: var(--button-color);
 }
 
-footer{
 
-    padding-bottom: 3rem;
-}
 
 /*search Box STyling*/
 .search {
@@ -148,11 +147,12 @@ footer{
   }
   
   #library-container, #playlist-container{
-    height:40vh;
+    /* min-height:100vh; */
     background-color: var(--primary-color);
-    opacity: 0.6;
+    opacity: 0.8;
     border-radius: 10px; 
-    padding: 10px;
+    padding: 3px;
+    color: var(--text-color);
 
   }
 
@@ -165,9 +165,16 @@ footer{
     flex:70% 1 2;
   }
 
+  #playlist-container li{
+
+    margin-bottom: 0.3rem;
+    border-radius: 10px;
+    
+  }
   .list-icons i{
 
     padding: 0.6rem;
+    cursor: pointer;
   }
 
   #media-image{
@@ -196,8 +203,17 @@ footer{
     padding-right: 0;
   }
 
-  #audio-container{
+  /* #audio-container{
 
     position: absolute;
     bottom: 3rem;
+  } */
+
+
+  footer{
+
+    /* position: fixed; */
+    /* bottom: 1rem; */
+    padding-bottom: 3rem;
+    margin:3rem;
   }

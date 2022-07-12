@@ -1,6 +1,7 @@
 
 const router = require('express').Router();
 const {Song}=require('../models');
+const {Op}=require('sequelize');
 
 router.get('/', (req, res) => {
 
@@ -42,7 +43,7 @@ router.get('/', (req, res) => {
   })
 
 
-  //SEARCH ROUTE
+  //SEARCH ROUTE-Based on the Artist Name
 
   router.get('/search/:searchText',async(req,res)=>{
 
@@ -53,8 +54,11 @@ router.get('/', (req, res) => {
   const searchData=await Song.findAll({
       attributes:['id','song_title','album_name','artist_name','media_url','media_image'],
       where:{
-          artist_name:searchValue
-      }
+          artist_name:
+          {
+            [Op.like]:`%${searchValue}%`
+          }
+        }
   });
 
   

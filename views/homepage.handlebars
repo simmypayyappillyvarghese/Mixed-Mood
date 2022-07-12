@@ -12,37 +12,44 @@
 </div>
 
 <!--Library & Playlist Component-->
-<div class="container-fluid d-flex justify-content-center align-items-center px-4 flex-wrap-md" id="library-playlist-container">
-  <div class="px-5 mx-5" id="library-container">
+<div class="container-fluid d-flex flex-column align-items-center justify-content-between">
+<div class="container-fluid d-flex justify-content-center align-items-start px-4 flex-wrap-sm my-2" id="library-playlist-container">
+  <div class="px-5 mx-5 my-2" id="library-container">
       My Library
   </div>
   <ul class="list-group px-3 mx-3" id="playlist-container">
-    <h6>Playlist</h6>
+    <div class="d-flex align-items-center justify-content-between flex-wrap p-3">
+      <h6>Playlist</h6>
+      <i class="fa fa-refresh"></i>
+    </div>
   {{#each songs as |song|}}
   <li class="list-group-item d-flex align-items-center justify-content-between" data-media={{song.media_url}} data-id={{song.id}} id="music-list">
   <img src={{song.media_image}} alt="Media Image" id="media-image">  
-  <div class="d-flex align-items-center justify-content-start flex-wrap-md" id="song-details">
+  <div class="d-flex align-items-start justify-content-betwen flex-wrap-md" id="song-details">
   <span class="text-dark">{{song.song_title}}</span>
-  <span class="text-dark">- {{song.album_name}}</span>
-  <span class="text-dark">,{{song.artist_name}}</span>
+  <span class="text-dark">{{song.album_name}}</span>
+  <span class="text-dark">{{song.artist_name}}</span>
   </div>
   <div class="list-icons d-flex align-items-center justify-content-between">
-    <i class="fa fa-heart" id="save-icon"> Save</i>
-    <i class="fa fa-play" id="play-icon"> Play</i>
-    <i class="fa fa-align-left" id="lyrics-icon"> Lyrics</i>
+    <i class="fa fa-heart" class="save-icon"> Save</i>
+    <i class="fa fa-play" class="play-icon"> Play</i>
+    <i class="fa fa-align-left" class="lyrics-icon"> Lyrics</i>
   </div>
 </li>
   {{/each}}
   </ul>
 </div>
-
-<!--Audio Element Componet-->
-<div class="container-fluid d-flex justify-content-center align-items-center px-4 flex-wrap-md" id="audio-container">
+  <!--Audio Element Componet-->
+<div class="container-fluid d-flex justify-content-center align-items-end px-4 flex-wrap my-5 py-5" id="audio-container">
   <audio  id="audio-element" controls>
   <source type="audio/ogg" id="audio-source">
   Your browser does not support the audio element.
  </audio>
 </div>
+
+</div>
+
+
 
 {{#if logged_in}}
 <script src="/js/search-box.js"></script>
