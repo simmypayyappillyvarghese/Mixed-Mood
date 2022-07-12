@@ -217,3 +217,8 @@ form{
     padding-bottom: 3rem;
     margin:3rem;
   }
+
+  /* Radio Button */
+.btn-group{
+  margin-right: 250px;
+}
