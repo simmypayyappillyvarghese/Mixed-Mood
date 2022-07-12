@@ -174,7 +174,7 @@ form{
   .list-icons i{
 
     padding: 0.6rem;
-    cursor: pointer;
+    cursor:grab;
   }
 
   #media-image{
