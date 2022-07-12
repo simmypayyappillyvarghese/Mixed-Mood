@@ -1,6 +1,8 @@
 
 const myLibrary=[];
 
+const library=document.querySelector('.song-list-container');
+
 async function addSongToLibrary(event){
 
      //Verifies the User clicked the Play Icon
@@ -12,7 +14,6 @@ async function addSongToLibrary(event){
         {
             method:'POST',
             body:JSON.stringify({songId}),
-            method: 'POST',
             headers: { 'Content-Type': 'application/json' },
         });
 

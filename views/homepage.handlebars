@@ -11,12 +11,17 @@
 </div>
 </div>
 
-<!--Library & Playlist Component-->
+<!--Library  Component-->
 <div class="container-fluid d-flex flex-column align-items-center justify-content-between">
 <div class="container-fluid d-flex justify-content-center align-items-start px-4 flex-wrap-sm my-2" id="library-playlist-container">
   <div class="p-3 mx-5 my-2" id="library-container">
       My Library
+      <div class="song-list-container">
+        {{songList}}
+      </div>
   </div>
+
+  <!--Playlist Component-->
   <ul class="list-group px-3 mx-3" id="playlist-container">
     <div class="d-flex align-items-center justify-content-between flex-wrap p-3">
       <h6>Playlist</h6>
@@ -39,6 +44,7 @@
   {{/each}}
   </ul>
 </div>
+
   <!--Audio Element Componet-->
 <div class="container-fluid d-flex justify-content-center align-items-end px-4 flex-wrap my-5 py-5" id="audio-container">
   <audio  id="audio-element" controls>
