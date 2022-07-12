@@ -3,7 +3,7 @@ const router = require('express').Router();
 const {Song, User , Library}=require('../models');
 const {Op}=require('sequelize');
 
-let songs;
+
 
 router.get('/', (req, res) => {
 
@@ -19,15 +19,15 @@ router.get('/', (req, res) => {
 
 
 
-  router.get('/home',(req,res)=>{
+  // router.get('/home',(req,res)=>{
 
-    if (!req.session.logged_in) {
-      res.redirect('/');
-      return;
-    }
+  //   if (!req.session.logged_in) {
+  //     res.redirect('/');
+  //     return;
+  //   }
 
-    res.render('homepage',{logged_in: req.session.logged_in });
-  })
+  //   res.render('homepage',{logged_in: req.session.logged_in });
+  // })
 
 
   //Application will be routed when the user clicks on the signup link
@@ -67,9 +67,13 @@ router.get('/', (req, res) => {
   if(searchData){
 
   //Serializing the Search Data
-    songs=searchData.map((data)=>{return data.get({plain:true})});
+    const songs=searchData.map((data)=>{return data.get({plain:true})});
+     req.session.save(()=>{
 
-     res.render('homepage',{songs,logged_in:req.session.logged_in});
+      req.session.songs=songs
+      res.render('homepage',{songs,logged_in:req.session.logged_in,parsedSongList:req.session.playlist});
+     });
+     
   }
 
   else{
@@ -83,7 +87,7 @@ catch(e){console.log(e);}
 
 //Get all the Song data based on the user id logged in by joining with the through table Library
 
-router.get('/home/save',async(req,res)=>{
+router.get('/home',async(req,res)=>{
 
 const userData=await User.findAll({
 
@@ -115,7 +119,11 @@ const parsedSongList=songList[0].user_song_list;
 
 if(userData){
 
-  res.render('homepage',{logged_in:req.session.logged_in,songList,parsedSongList}); 
+  req.session.save(()=>{
+    req.session.playlist=parsedSongList
+    res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
+  });
+  
 }
 
 });

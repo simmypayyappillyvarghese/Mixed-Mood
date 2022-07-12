@@ -25,7 +25,7 @@ async function addSongToLibrary(event){
         if(response.ok){
 
             console.log("To do -Display the Success Message");
-            window.location.replace('/home/save');
+            window.location.replace('/home');
         }
         }
         else{

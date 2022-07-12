@@ -46,9 +46,10 @@
         <li class="list-group-item py-2">
           <div class="d-flex align-items-center justify-content-between flex-wrap-md">
               <img src={{songList.media_image}} alt="Media Image" id="media-image">  
-              <span class="text-dark">{{songList.song_title}}</span>
+              <span class="text-dark flex-wrap">{{songList.song_title}}</span>
               <small class="text-dark">{{songList.artist_name}}</small>
-            </div>
+              <i class="fa fa-play" class="play-icon">Play</i>
+          </div>
         </li>
         {{/each}}
         </ul>
