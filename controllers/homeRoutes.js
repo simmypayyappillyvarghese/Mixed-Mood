@@ -1,7 +1,9 @@
 
 const router = require('express').Router();
-const {Song}=require('../models');
+const {Song, User , Library}=require('../models');
 const {Op}=require('sequelize');
+
+let songs;
 
 router.get('/', (req, res) => {
 
@@ -65,7 +67,7 @@ router.get('/', (req, res) => {
   if(searchData){
 
   //Serializing the Search Data
-   const songs=searchData.map((data)=>{return data.get({plain:true})});
+    songs=searchData.map((data)=>{return data.get({plain:true})});
 
      res.render('homepage',{songs,logged_in:req.session.logged_in});
   }
@@ -79,7 +81,29 @@ catch(e){console.log(e);}
 
 });
 
+//Get Library Data Route
 
+router.get('/home/save',async(req,res)=>{
+
+const userData=await Library.findAll({
+
+  attributes: ['song_id'],
+  // include:[{model:Song,through:Library,as:'user_song_list'}],
+  //join with Library,grab all song ids from it
+  where:{
+    user_id:req.session.user_id
+  }
+})
+
+const songList=userData.map(data=>data.get({plain:true}));
+console.log(songList);
+if(userData){
+
+  //Should I pass songs as well here ?
+  res.render('homepage',{songList,songs}); //array of song ids
+}
+
+});
 
 
 
