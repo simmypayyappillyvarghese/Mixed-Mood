@@ -216,3 +216,17 @@ form{
     margin-top:20px;
   }
  
+  /*pointer events none will prevent any events on disabled icons*/
+i[disabled]{
+
+    color:#CD5C5C;
+    
+    pointer-events:none;
+    /* cursor: not-allowed; */
+
+}
+
+@media screen and (max-width:900px) {
+    
+    
+}

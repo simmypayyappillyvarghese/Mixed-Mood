@@ -63,6 +63,7 @@ router.get('/', (req, res) => {
         }
   });
 
+
   
   if(searchData){
 
@@ -94,7 +95,7 @@ const userData=await User.findAll({
     model:Song,
     through:Library,
     as:'user_song_list',
-    attributes:['artist_name','album_name','media_image','song_title','media_url']
+    attributes:['id','artist_name','album_name','media_image','song_title','media_url'] 
   } 
   ],
   where:{
@@ -116,13 +117,33 @@ console.log(songList[0].user_song_list);
 const parsedSongList=songList[0].user_song_list;
 // let isSaved;
 
+//TO VERIFY 
 
 
+if(req.session.songs){
+  for(let i=0;i<req.session.songs.length;i++){
 
+    parsedSongList.forEach(librarySong=>{
+  
+      if(librarySong.id==req.session.songs[i].id){
+  
+        req.session.songs[i].disabled='disabled';
+      }
+  
+    })
+  }
+}
+
+
+console.log(req.session.songs);
 if(userData){
 
   req.session.save(()=>{
     req.session.playlist=parsedSongList
+
+    //
+   
+
         res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
   });
   
