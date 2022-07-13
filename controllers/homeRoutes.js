@@ -90,7 +90,6 @@ catch(e){console.log(e);}
 router.get('/home',async(req,res)=>{
 
 const userData=await User.findAll({
-
   include:[{
     model:Song,
     through:Library,
@@ -115,13 +114,16 @@ console.log("-----------------------------");
 console.log(songList);
 console.log(songList[0].user_song_list);
 const parsedSongList=songList[0].user_song_list;
+// let isSaved;
+
+
 
 
 if(userData){
 
   req.session.save(()=>{
     req.session.playlist=parsedSongList
-    res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
+        res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
   });
   
 }
@@ -149,7 +151,7 @@ if(searchData){
 //Serializing the Search Data
   const songs=searchData.map((data)=>{return data.get({plain:true})});
 
-   res.render('homepage',{songs,logged_in:req.session.logged_in});
+   res.render('homepage',{songs,logged_in:req.session.logged_in,parsedSongList:req.session.playlist});
 }
 
 else{
