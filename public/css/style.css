@@ -208,7 +208,19 @@ form{
 /* 
     position:relative;
   } */ 
+  label[data-toggle="tooltip"] {
+    margin:0 2px;
+      
+  }
+  
+  img{
+    /* position: relative; */
+    max-height: 100px;
+  }
 
+
+
+  
 
   footer{
 
@@ -336,6 +348,7 @@ i[disabled]{
 *::after {
   box-sizing: border-box;
 }
+
 
 
     
