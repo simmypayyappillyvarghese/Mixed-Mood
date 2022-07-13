@@ -9,6 +9,51 @@
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/Bleed_It_Out_sk3oml.jpg"
     },
     {
+        "song_title":"Given Up",
+        "album_name":"Minutes To Midnight",
+        "artist_name":"Linking Park",
+        "genre":"Alternative-Rock",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695592/Linkin_Park_-_Given_Up_zbifja.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/Bleed_It_Out_sk3oml.jpg"
+    },
+    {
+        "song_title":"Monster",
+        "album_name":"Awake",
+        "artist_name":"Skillet",
+        "genre":"Metal",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695591/Skillet_-_Skillet-Monster_it8gkf.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Monster_gd6quo.jpg"
+    },
+    {
+        "song_title":"Duality",
+        "album_name":"Vol. 3: (The Subliminal Verses)",
+        "artist_name":"Slipknot",
+        "genre":"Metal",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695593/Slipknot-Duality_upx4zq.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Duality_sffpkp.jpg"
+    },
+    {
+        "song_title":"Chop Suey!",
+        "album_name":"Toxicity",
+        "artist_name":"System Of A Down",
+        "genre":"Nu-Metal",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695592/System_Of_A_Down_-_Chop_Suey_dsqpp9.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Chop_Suey_yvpafv.jpg"
+    },
+    {
+        "song_title":"The Kids Aren't Alright",
+        "album_name":"The Kids Ain't Alright",
+        "artist_name":"The Offspring",
+        "genre":"Punk-Rock",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695592/The_Offspring_-_The_Kids_Arent_Alright_g5xeez.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/The_Kids_Arent_Alright_l7hfjh.jpg"
+    },
+    {
         "song_title":"Down With The Sickness",
         "album_name":"The Sickness",
         "artist_name":"Disturbed",
@@ -87,7 +132,52 @@
         "genre":"Dance-Pop",
         "mood":"happy",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525291/Pitbull_-_International_Love_ft._Chris_Brown_vyznm6.mp3",
-        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Happy_khfjes.jpg"
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/International_Love_iuwx1f.jpg"
+    },
+    {
+        "song_title":"Feels Like Summer",
+        "album_name":"Summer",
+        "artist_name":"Childish Gambino",
+        "genre":"Soul",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695593/Childish_Gambino_-_Feels_Like_Summer_hh1kws.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Feels_Like_Summer_n1q6kr.jpg"
+    },
+    {
+        "song_title":"Memories",
+        "album_name":"One Love",
+        "artist_name":"David Guetta",
+        "genre":"Dance",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695593/David_Guetta-_Memories_j9khhj.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Memories_nutxwf.jpg"
+    },
+    {
+        "song_title":"Lean On",
+        "album_name":"Peace Is the Mission",
+        "artist_name":"Major Lazer",
+        "genre":"Electro",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695594/Major_Lazer-_Lean_On_dt4j6a.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Lean_On_rwdf4x.jpg"
+    },
+    {
+        "song_title":"Counting Stars",
+        "album_name":"Native",
+        "artist_name":"OneRepublic",
+        "genre":"Folk Rock",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695594/OneRepublic_-_Counting_Stars_vxkgqn.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Counting_Stars_yxevat.jpg"
+    },
+    {
+        "song_title":"Something Just Like This",
+        "album_name":" Memories...Do Not Open",
+        "artist_name":"The Chainsmokers",
+        "genre":"Dance",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695594/The_Chainsmokers_Coldplay-Something_Just_Like_This_efrxud.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695749/Something_Just_Like_This_farpuz.jpg"
     },
     {
         "song_title":"Rocketeer",
@@ -135,6 +225,51 @@
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Til_The_End_Of_Time_xjitzw.jpg"
     },
     {
+        "song_title":"Nothin' On You",
+        "album_name":" B.o.B Presents: The Adventures of Bobby Ray",
+        "artist_name":"B.o.B",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695595/BoB_-_Nothin_On_You_jqcyvl.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/Nothing_On_You_xhzgeq.jpg"
+    },
+    {
+        "song_title":"2U",
+        "album_name":"7",
+        "artist_name":"David Guetta",
+        "genre":"EDM",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695596/David_Guetta_-_2U_km3mlm.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/2U_vmbrcn.jpg"
+    },
+    {
+        "song_title":"Hide",
+        "album_name":"Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)",
+        "artist_name":"Juice Wrld",
+        "genre":"Hip-Hop",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695595/Hide_t1revf.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/Hide_pk1qni.jpg"
+    },
+    {
+        "song_title":"Scary Love",
+        "album_name":"The Neighbourhood",
+        "artist_name":"The Neighbourhood",
+        "genre":"Electro",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695596/the_neighbourhood-scary_love_aihpth.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/Scary_Love_wk17sr.jpg"
+    },
+    {
+        "song_title":"Would You Ever",
+        "album_name":"Single",
+        "artist_name":"Skrillex",
+        "genre":"Deep-House",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695596/Skrillex-_Would_You_Ever_abyxyo.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/Would_You_Ever_ymqrnd.jpg"
+    },
+    {
         "song_title":"I'm On One",
         "album_name":"We the Best Forever",
         "artist_name":"DJ Khaled",
@@ -178,6 +313,51 @@
         "mood":"pumped-up",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Fort_Minor_-_Remember_The_Name_qysmsi.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Fort_Minor_jqgrgp.jpg"
+    },
+    {
+        "song_title":"Stronger",
+        "album_name":"Graduation",
+        "artist_name":"Kanye West",
+        "genre":"Alternative-Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695598/Stronger_el8n9v.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695751/Stronger_j4yo0o.jpg"
+    },
+    {
+        "song_title":"Blessings",
+        "album_name":"Dark Sky Paradise",
+        "artist_name":"Big Sean",
+        "genre":"Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695599/Big_Sean_-_Blessings_zlm8ba.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/Blessings_y0n4e0.jpg"
+    },
+    {
+        "song_title":"Jumpman",
+        "album_name":"What a Time to Be Alive",
+        "artist_name":"Drake",
+        "genre":"Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695596/Jumpman_xpptxh.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695596/Jumpman_xpptxh.mp3"
+    },
+    {
+        "song_title":"Nuketown",
+        "album_name":"Stokeley",
+        "artist_name":"Ski Mask the Slump God",
+        "genre":"Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695598/Ski_Mask_the_Slump_God_-_Nuketown_hen2ey.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/Nuketown_nqsa1t.jpg"
+    },
+    {
+        "song_title":"Butterfly Effect",
+        "album_name":"Astroworld",
+        "artist_name":"Travis Scott",
+        "genre":"Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695598/Travis_Scott_-_BUTTERFLY_EFFECT_hy1pqu.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695751/Butterfly_Effect_tvqeqr.jpg"
     },
     {
         "song_title":"Can You Feel My Heart",
