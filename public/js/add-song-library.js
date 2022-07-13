@@ -25,6 +25,7 @@ async function addSongToLibrary(event){
             
             console.log("To do -Display the Success Message");
             window.location.replace('/home');
+            // event.target.classList.add('savedSong');
         }
         }
         else{

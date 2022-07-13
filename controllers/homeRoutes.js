@@ -135,8 +135,6 @@ if(userData){
   req.session.save(()=>{
     req.session.playlist=parsedSongList
     
-    //
-   
 
         res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
   });

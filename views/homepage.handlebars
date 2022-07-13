@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="d-flex align-items-center justify-content-between flex-wrap px-5 mx-5 mb-3">
+
 <!--Radio Button-->
  <div class="btn-group px-5">
     <input value="anger" type="radio" class="btn-check" name="options" id="option1" autocomplete="off"/>
@@ -25,7 +26,7 @@
 
 <div class="py-4 px-5">
 <div class="search" data-search>
-  <label for="search" class="search-label">Search For Your Favorites</label>
+  <label for="search" class="search-label">Search For the songs by Artist</label>
   <input id="search" class="search-input" data-search-input>
   <button class="search-control" data-search-control aria-label="clear search"></button>
 </div>
@@ -36,8 +37,8 @@
 
 
 <!--Library  Component-->
-<div class="container-fluid d-flex flex-column align-items-center justify-content-between flex-wrap-md flex-wrap-sm">
-<div class="container-fluid d-flex justify-content-center align-items-start px-4 flex-wrap-md flex-wrap-sm my-1" id="library-playlist-container">
+<div class="container-fluid d-flex flex-column align-items-center justify-content-between">
+<div class="container-fluid d-flex justify-content-center align-items-start px-4  flex-wrap-sm my-1" id="library-playlist-container">
   <div class="px-4  py-3 mx-5 my-2" id="library-container">
       <h6>My Library</h6>
       <div class="song-list-container">
@@ -61,14 +62,14 @@
 
   <!--Playlist Component-->
   <ul class="list-group px-3 mx-3" id="playlist-container">
-    <div class="conatainer-fluid d-flex align-items-center justify-content-between flex-wrap-md py-3 px-5">
+    <div class="conatainer-fluid d-flex align-items-center justify-content-between py-3 px-5">
       <h6>Playlist</h6>
       <i class="fa fa-refresh"></i>
     </div>
   {{#each songs as |song|}}
-  <li class="list-group-item d-flex align-items-center justify-content-between" data-media={{song.media_url}} data-id={{song.id}} id="music-list">
+  <li class="list-group-item d-flex align-items-center justify-content-between song" data-media={{song.media_url}} data-id={{song.id}}>
   <img src={{song.media_image}} alt="Media Image" id="media-image">  
-  <div class="d-flex align-items-center justify-content-between flex-wrap-md" id="song-details">
+  <div class="d-flex align-items-center justify-content-between flex-wrap-md song-details">
   <span class="text-dark">{{song.song_title}}</span>
   <span class="text-dark">{{song.album_name}}</span>
   <span class="text-dark">{{song.artist_name}}</span>
@@ -84,7 +85,7 @@
 </div>
 
   <!--Audio Element Componet-->
-<div class="container-fluid d-flex justify-content-center align-items-end px-4 flex-wrap my-5 py-5" id="audio-container">
+<div class="container-fluid d-flex justify-content-center align-items-end px-4 my-5 py-5" id="audio-container">
   <audio  id="audio-element" controls>
   <source type="audio/ogg" id="audio-source">
   Your browser does not support the audio element.
