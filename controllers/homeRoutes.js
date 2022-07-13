@@ -1,4 +1,3 @@
-
 const router = require('express').Router();
 const {Song, User , Library}=require('../models');
 const {Op}=require('sequelize');
@@ -117,12 +116,6 @@ console.log(songList);
 console.log(songList[0].user_song_list);
 
 const parsedSongList=songList[0].user_song_list;
-
-const temp = parsedSongList
-for(let i = temp.length -1; i>0;i--) {
-  let j=Math.floor(Math.random()* (i + 1))
-  [temp[i], temp[j]] = [temp[j], temp[i]];}
-parsedSongList = temp 
 
 
 if(userData){

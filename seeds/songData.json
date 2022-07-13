@@ -223,5 +223,34 @@
         "mood":"sad",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525296/The_Weeknd_-Faith_f2a8n6.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Faith_dwue7d.jpg"
+    },
+    {
+        "song_title":"Little L",
+        "album_name":"A Funk Odyessey",
+        "artist_name":"Jamiroquai",
+        "genre":"Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Jamiroquai_-_Little_L_cgsp3i.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657737198/Funk_Odessey_hcut80.jpg"
+    },
+    {
+        "song_title":"U Don't Have To Call",
+        "album_name":"8701",
+        "artist_name":"Usher",
+        "genre":"R&B",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Usher_-_U_don_t_have_to_call_uvyzw7.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657737198/8701_c5fhtg.jpg"
+    },
+    {
+        "song_title":"Ladies Night",
+        "album_name":"Funk Essentials: Kool & The Gang - The 12' Collection",
+        "artist_name":"Kool & The Gang",
+        "genre":"Funk",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Kool_The_Gang_-_Ladies_Night_wcjqwf.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657737198/Kool_and_the_Gang_Cover_x527l7.jpg"
     }
+    
 ]
+

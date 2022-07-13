@@ -63,9 +63,9 @@
       <i class="fa fa-refresh" id="refresh-icon"></i>
     </div>
   {{#each songs as |song|}}
-  <li class="list-group-item d-flex align-items-center justify-content-between" data-media={{song.media_url}} data-id={{song.id}} id="music-list">
-  <img src={{song.media_image}} alt="Media Image" id="media-image">  
-  <div class="d-flex align-items-start justify-content-betwen flex-wrap-md" id="song-details">
+  <li class="list-group-item d-flex align-items-center justify-content-between song" data-media={{song.media_url}} data-id={{song.id}}>
+  <img src={{song.media_image}} alt="Media Image" class="media-image">  
+  <div class="d-flex align-items-start justify-content-betwen flex-wrap-md song-details">
   <span class="text-dark">{{song.song_title}}</span>
   <span class="text-dark">{{song.album_name}}</span>
   <span class="text-dark">{{song.artist_name}}</span>
