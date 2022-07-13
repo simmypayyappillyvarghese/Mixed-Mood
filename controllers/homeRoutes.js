@@ -136,6 +136,38 @@ if(userData){
 
 });
 
+//Mood Route
+router.get('/mood/:moodText',async(req,res)=>{
+
+  try{
+
+    const searchValue=req.params.moodText;
+
+const searchData=await Song.findAll({
+    attributes:['id','song_title','album_name','artist_name','media_url','media_image'],
+    where:{
+          mood:searchValue
+        }
+      
+});
+
+
+if(searchData){
+
+//Serializing the Search Data
+  songs=searchData.map((data)=>{return data.get({plain:true})});
+
+   res.render('homepage',{songs,logged_in:req.session.logged_in});
+}
+
+else{
+  const error={"message":"No data found"};
+  res.render('homepage',{error});
+}
+}
+catch(e){console.log(e);}
+
+});
 
 
   module.exports = router;
