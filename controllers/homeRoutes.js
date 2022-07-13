@@ -19,17 +19,6 @@ router.get('/', (req, res) => {
 
 
 
-  // router.get('/home',(req,res)=>{
-
-  //   if (!req.session.logged_in) {
-  //     res.redirect('/');
-  //     return;
-  //   }
-
-  //   res.render('homepage',{logged_in: req.session.logged_in });
-  // })
-
-
   //Application will be routed when the user clicks on the signup link
 
   router.get('/signup',(req,res)=>{
@@ -90,6 +79,7 @@ catch(e){console.log(e);}
 
 router.get('/home',async(req,res)=>{
 
+  console.log("Session loggedin",req.session.logged_in);
 const userData=await User.findAll({
   include:[{
     model:Song,
@@ -103,44 +93,48 @@ const userData=await User.findAll({
   }
 });
 
-console.log("----------------------------");
-console.log(userData);
 
-const songList=userData.map((data)=>data.get({plain:true}));
+// console.log("----------------------------");
+// console.log(userData);
 
-
-console.log("-----------------------------");
+ const songList=userData.map((data)=>data.get({plain:true}));
 
 
-console.log(songList);
-console.log(songList[0].user_song_list);
-const parsedSongList=songList[0].user_song_list;
+// console.log("-----------------------------");
+
+
+// console.log(songList);
+// console.log(songList[0].user_song_list);
+ const parsedSongList=songList[0].user_song_list;
 // let isSaved;
 
 //TO VERIFY 
 
-
-if(req.session.songs){
-  for(let i=0;i<req.session.songs.length;i++){
-
-    parsedSongList.forEach(librarySong=>{
-  
-      if(librarySong.id==req.session.songs[i].id){
-  
-        req.session.songs[i].disabled='disabled';
-      }
-  
-    })
-  }
-}
+console.log(parsedSongList);
 
 
-console.log(req.session.songs);
+
+
+// console.log(req.session.songs);
 if(userData){
+  
+  if(req.session.songs){
+    for(let i=0;i<req.session.songs.length;i++){
+  
+      parsedSongList.forEach(librarySong=>{
+    
+        if(librarySong.id==req.session.songs[i].id){
+    
+          req.session.songs[i].disabled='disabled';
+        }
+    
+      })
+    }
+  }
 
   req.session.save(()=>{
     req.session.playlist=parsedSongList
-
+    
     //
    
 
