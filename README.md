@@ -37,33 +37,33 @@ ROUTES:
 
 * App Route /Root Route
 
-http://localhost:3001/         :  Directs the Page to Starting Page of Application with Login Form(If User is not loggedin)
+    http://localhost:3001/         :  Directs the Page to Starting Page of Application with Login Form(If User is not loggedin)
 
 * HOME ROUTE 
-http://localhost:3001/home     :  Directs the Page to Home Page ,When user enter the login button with their credentials.
+    http://localhost:3001/home     :  Directs the Page to Home Page ,When user enter the login button with their credentials.
                                   If user is not logged in direct to the root page woth login form
 
 * SIGN UP ROUTE (POST method)
-http://localhost:3001/signup   :  Directs the Page to SignUp form Page ,When user clicks the signup link in root page
+    http://localhost:3001/signup   :  Directs the Page to SignUp form Page ,When user clicks the signup link in root page
                                 
 
 * LOGOUT ROUTE (POST method)
 
-http://localhost:3001/logout    : Directs the Page to the Root Page with Login Form
+    http://localhost:3001/logout    : Directs the Page to the Root Page with Login Form
 
 * SEARCH ROUTE(GET method)
 
-http://localhost:3001/search/<searchtext> : Update the homepage with the search result
+    http://localhost:3001/search/<searchtext> : Update the homepage with the search result
 
 
 * Save SONG ROUTE (POST method)
 
-http://localhost:3001/saveSong : Add the Song to the Library and redirect to home page with song added to library
+    http://localhost:3001/saveSong : Add the Song to the Library and redirect to home page with song added to library
 
 * MOOD ROUTE(Get method) 
 
-http://localhost:3001/mood/:moodText : Get the Songs based on the mood text passed in and redirect to home page and 
-display the related songs 
+    http://localhost:3001/mood/:moodText : Get the Songs based on the mood text passed in and redirect to home page and 
+    display the related songs 
 
 
 ### Technologies/Packages Used
@@ -89,10 +89,31 @@ display the related songs
 
 ### Links
 
+
 <br>
 
 ### Screenshot
 
+Screenshot of homepage after user logs in and select a song to play
+
+<br>
+
+
+![homepage  screenshot](./public/images/homepage_screenshot.png)
+
+Screenshot of Login form
+
+<br>
+
+
+![login form screenshot](./public/images/login-form.png)
+
+Screenshot of Signup form
+
+
+<br>
+
+![sign up form screenshot](./public/images/signup-form.png)
 
 ### References
 
