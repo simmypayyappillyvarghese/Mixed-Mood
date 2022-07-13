@@ -19,17 +19,6 @@ router.get('/', (req, res) => {
 
 
 
-  // router.get('/home',(req,res)=>{
-
-  //   if (!req.session.logged_in) {
-  //     res.redirect('/');
-  //     return;
-  //   }
-
-  //   res.render('homepage',{logged_in: req.session.logged_in });
-  // })
-
-
   //Application will be routed when the user clicks on the signup link
 
   router.get('/signup',(req,res)=>{
@@ -63,6 +52,7 @@ router.get('/', (req, res) => {
         }
   });
 
+
   
   if(searchData){
 
@@ -89,13 +79,13 @@ catch(e){console.log(e);}
 
 router.get('/home',async(req,res)=>{
 
+  console.log("Session loggedin",req.session.logged_in);
 const userData=await User.findAll({
-
   include:[{
     model:Song,
     through:Library,
     as:'user_song_list',
-    attributes:['artist_name','album_name','media_image','song_title','media_url']
+    attributes:['id','artist_name','album_name','media_image','song_title','media_url'] 
   } 
   ],
   where:{
@@ -103,26 +93,50 @@ const userData=await User.findAll({
   }
 });
 
-console.log("----------------------------");
-console.log(userData);
 
-let songList=userData.map((data)=>data.get({plain:true}));
+// console.log("----------------------------");
+// console.log(userData);
 
-
-console.log("-----------------------------");
+ const songList=userData.map((data)=>data.get({plain:true}));
 
 
-console.log(songList);
-console.log(songList[0].user_song_list);
-
-const parsedSongList=songList[0].user_song_list;
+// console.log("-----------------------------");
 
 
+// console.log(songList);
+// console.log(songList[0].user_song_list);
+ const parsedSongList=songList[0].user_song_list;
+// let isSaved;
+
+//TO VERIFY 
+
+console.log(parsedSongList);
+
+
+
+
+// console.log(req.session.songs);
 if(userData){
+  
+  if(req.session.songs){
+    for(let i=0;i<req.session.songs.length;i++){
+  
+      parsedSongList.forEach(librarySong=>{
+    
+        if(librarySong.id==req.session.songs[i].id){
+    
+          req.session.songs[i].disabled='disabled';
+        }
+    
+      })
+    }
+  }
 
   req.session.save(()=>{
     req.session.playlist=parsedSongList
-    res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
+    
+
+        res.render('homepage',{logged_in:req.session.logged_in,songs:req.session.songs,parsedSongList}); 
   });
   
 }
@@ -148,9 +162,9 @@ const searchData=await Song.findAll({
 if(searchData){
 
 //Serializing the Search Data
-  songs=searchData.map((data)=>{return data.get({plain:true})});
+  const songs=searchData.map((data)=>{return data.get({plain:true})});
 
-   res.render('homepage',{songs,logged_in:req.session.logged_in});
+   res.render('homepage',{songs,logged_in:req.session.logged_in,parsedSongList:req.session.playlist});
 }
 
 else{
