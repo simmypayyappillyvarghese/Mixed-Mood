@@ -1,4 +1,5 @@
 
+
 const body = document.querySelector('body');
 const searchElement = document.querySelector('[data-search]');
 const searchInputElement = searchElement.querySelector('[data-search-input]');
@@ -6,7 +7,7 @@ const searchControlElement = searchElement.querySelector('[data-search-control]'
 const searchOpenClass = 'is-search-open';
 
 /**
- * Helper to close the search if user clicks elsewhere.
+ * Search Box JS Code for animation
  */
 body.addEventListener('click', (event) => {
   if (event.target !== searchInputElement && event.target !== searchControlElement) {
@@ -27,21 +28,15 @@ searchControlElement.addEventListener('click', () => {
 });
 
 
+//If User enter a text and search for it will make a fetch call to search route
 
 async function searchHandler(){
 
-
-    console.log(searchInputElement.value);
-   
-
     const searchText=searchInputElement.value;
     if(searchText){
-
       window.location.replace(`/search/${searchText}`);
     }
 
-    //TO DO else handler
 }
-
 
 searchInputElement.addEventListener('change',searchHandler);

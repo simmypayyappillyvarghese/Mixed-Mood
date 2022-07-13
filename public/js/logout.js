@@ -1,3 +1,5 @@
+//When user logsout gets redirected to the root page
+
 const logoutHandler = async () => {
     const response = await fetch('/api/user/logout', {
       method: 'POST',

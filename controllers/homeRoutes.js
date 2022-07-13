@@ -1,25 +1,29 @@
 const router = require('express').Router();
 const {Song, User , Library}=require('../models');
 const {Op}=require('sequelize');
-const { parse } = require('dotenv');
+const withAuth=require('../utils/auth')
 
+//Root /APP Route
 
+//If User is logged in redirect to homepage else direct to root page with login form
 
 router.get('/', (req, res) => {
 
-  req.session.logged_in=false;
-    if (req.session.logged_in) {
-      res.redirect('/home');
-      return;
-    }
-  
+
     res.render('login',{logged_in: req.session.logged_in });
     
   });
 
 
+  router.get('/login', (req, res) => {
 
-  //Application will be routed when the user clicks on the signup link
+
+    res.render('login',{logged_in: req.session.logged_in });
+    
+  });
+
+ //SIGNUP ROUTE
+//Application will be routed when the user clicks on the signup link
 
   router.get('/signup',(req,res)=>{
 
@@ -34,14 +38,15 @@ router.get('/', (req, res) => {
   })
 
 
+
   //SEARCH ROUTE-Based on the Artist Name
+  //Get all the song data based on the artist name(Wild search using like) entered in search box
 
   router.get('/search/:searchText',async(req,res)=>{
 
     try{
 
       const searchValue=req.params.searchText;
-  
   const searchData=await Song.findAll({
       attributes:['id','song_title','album_name','artist_name','media_url','media_image'],
       where:{
@@ -52,14 +57,12 @@ router.get('/', (req, res) => {
         }
   });
 
-
   
   if(searchData){
 
   //Serializing the Search Data
     const songs=searchData.map((data)=>{return data.get({plain:true})});
      req.session.save(()=>{
-
       req.session.songs=songs
       res.render('homepage',{songs,logged_in:req.session.logged_in,parsedSongList:req.session.playlist});
      });
@@ -75,11 +78,14 @@ catch(e){console.log(e);}
 
 });
 
-//Get all the Song data based on the user id logged in by joining with the through table Library
 
-router.get('/home',async(req,res)=>{
+//HOME ROUTE
 
-  console.log("Session loggedin",req.session.logged_in);
+//Get all the Song data based on the user by joining with the through table Library
+
+router.get('/home',withAuth,async(req,res)=>{
+
+
 const userData=await User.findAll({
   include:[{
     model:Song,
@@ -94,28 +100,14 @@ const userData=await User.findAll({
 });
 
 
-// console.log("----------------------------");
-// console.log(userData);
+//parsedSonglist is the songs in the library for a specific user
 
  const songList=userData.map((data)=>data.get({plain:true}));
-
-
-// console.log("-----------------------------");
-
-
-// console.log(songList);
-// console.log(songList[0].user_song_list);
  const parsedSongList=songList[0].user_song_list;
-// let isSaved;
 
-//TO VERIFY 
+ //Checks if the song in the playlist is already added to the library.
+ //If then add disabled property to songs object in session and apply styling for the heart icon
 
-console.log(parsedSongList);
-
-
-
-
-// console.log(req.session.songs);
 if(userData){
   
   if(req.session.songs){
@@ -143,7 +135,12 @@ if(userData){
 
 });
 
+
 //Mood Route
+/*
+  Fetches the Song Data related to the mood text from Song table
+  Render the homepage with the songlist 
+*/
 router.get('/mood/:moodText',async(req,res)=>{
 
   try{
@@ -160,10 +157,8 @@ const searchData=await Song.findAll({
 
 
 if(searchData){
-
 //Serializing the Search Data
   const songs=searchData.map((data)=>{return data.get({plain:true})});
-
    res.render('homepage',{songs,logged_in:req.session.logged_in,parsedSongList:req.session.playlist});
 }
 

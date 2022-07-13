@@ -4,10 +4,10 @@ const libraryConainer=document.querySelector('#library-container');
 const audioElement=document.querySelector('#audio-element');
 const audioSource=document.querySelector('#audio-source');
 
+//Display the audio player and play the selected song from library and playlist
 
 function playSongHandler(event){
 
-    
     let media_url;
 
     //Verifies the User clicked the Play Icon from Playlist or Library
@@ -27,13 +27,13 @@ function playSongHandler(event){
 
     audioElement.load();
     audioElement.play();
-
-    
+  
     
 }
 else{
     return;
 }
 }
+
 playList.addEventListener('click',playSongHandler);
 libraryConainer.addEventListener('click',playSongHandler);

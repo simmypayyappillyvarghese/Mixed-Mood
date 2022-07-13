@@ -1,14 +1,17 @@
-const emailValidator=(input)=>{
+//Validates the email format
 
+const emailValidator=(input)=>{
 
     return input.match(/^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/);
 
 }
 
+//When User clicks the login form ,validates the email and password 
+//Makes fetch call to login route and redirect to hoem route
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
-  
+
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
     const errorMessage=document.querySelector('.error-message');
