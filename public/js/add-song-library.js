@@ -10,8 +10,7 @@ async function addSongToLibrary(event){
        
         const songId=event.target.parentElement.parentElement.dataset.id;
        
-        // event.target
-        event.target.style.color='#CD5C5C';
+        console.log(event.target.disabled);
 
         const response=await fetch('/api/user/saveSong',
         {
@@ -23,9 +22,10 @@ async function addSongToLibrary(event){
         console.log(response);
 
         if(response.ok){
-
+            
             console.log("To do -Display the Success Message");
             window.location.replace('/home');
+            // event.target.classList.add('savedSong');
         }
         }
         else{

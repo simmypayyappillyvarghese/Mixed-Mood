@@ -405,48 +405,32 @@
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Faith_dwue7d.jpg"
     },
     {
-        "song_title":"All Time Low",
-        "album_name":"Single",
-        "artist_name":"Jon Bellion",
-        "genre":"Alternative-Rock",
-        "mood":"sad",
-        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695598/Jon_Bellion_-_All_Time_Low_zprwhw.mp3",
-        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695751/All_Time_Low_rky5wa.jpg"
+        "song_title":"Little L",
+        "album_name":"A Funk Odyessey",
+        "artist_name":"Jamiroquai",
+        "genre":"Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Jamiroquai_-_Little_L_cgsp3i.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657737198/Funk_Odessey_hcut80.jpg"
     },
     {
-        "song_title":"ADHD",
-        "album_name":"ADHD",
-        "artist_name":"Joyner Lucas",
-        "genre":"Hip-Hop",
-        "mood":"sad",
-        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695598/Joyner_Lucas_-_ADHD_hbvpi3.mp3",
-        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695750/ADHD_p18tgo.jpg"
+        "song_title":"U Don't Have To Call",
+        "album_name":"8701",
+        "artist_name":"Usher",
+        "genre":"R&B",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Usher_-_U_don_t_have_to_call_uvyzw7.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657737198/8701_c5fhtg.jpg"
     },
     {
-        "song_title":"Let Me Know",
-        "album_name":"Single",
-        "artist_name":"Juice Wrld",
-        "genre":"Emo-Rap",
-        "mood":"sad",
-        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695599/Juice_WRLD_-Let_Me_Know_yd1p70.mp3",
-        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695751/Let_Me_Know_q2jai5.jpg"
-    },
-    {
-        "song_title":"Dead Memories",
-        "album_name":"All Hope Is Gone",
-        "artist_name":"Slipknot",
-        "genre":"Metal",
-        "mood":"sad",
-        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695599/Slipknot_-_Dead_Memories_mykwlj.mp3",
-        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695751/Dead_Memories_porybv.jpg"
-    },
-    {
-        "song_title":"Fuck Love",
-        "album_name":"17",
-        "artist_name":"XXXTENTACION",
-        "genre":"Rap",
-        "mood":"sad",
-        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657695599/XXXTENTACION_-_Fuck_Love_pqepzq.mp3",
-        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657695751/Fuck_Love_jpadkt.jpg"
+        "song_title":"Ladies Night",
+        "album_name":"Funk Essentials: Kool & The Gang - The 12' Collection",
+        "artist_name":"Kool & The Gang",
+        "genre":"Funk",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Kool_The_Gang_-_Ladies_Night_wcjqwf.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657737198/Kool_and_the_Gang_Cover_x527l7.jpg"
     }
+    
 ]
+

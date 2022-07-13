@@ -1,7 +1,12 @@
+//Any URL with /api/user will be directed to this page
+
 const router = require('express').Router();
 const {User,Library}=require('../../models');
 
- //On route /signup,user will user will be created  with the passed email and password
+ //SIGN UP ROUTE
+ 
+ // User is created with the email and password passed in the request
+ // Set the logged_in flag as true and save it in session
 
 router.post('/signup', async (req, res) => {
   try {
@@ -10,7 +15,6 @@ router.post('/signup', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      console.log(res.status);
       res.status(200).json(userData);
     });
 
@@ -34,7 +38,7 @@ router.post('/login', async (req, res) => {
         return;
       }
   
-      const validPassword = await userData.checkPassword(req.body.password);
+      const validPassword = userData.checkPassword(req.body.password);
   
       if (!validPassword) {
         res
@@ -43,14 +47,23 @@ router.post('/login', async (req, res) => {
         return;
       }
   
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
-        
-        res.json({ user: userData,logged_in: req.session.logged_in,message: 'You are now logged in!' });
-      });
+      console.log(userData,userData.id);
+
       
+        req.session.save(() => {
+          req.session.user_id = userData.id;
+          req.session.logged_in = true;
+          console.log("------------------------------");
+          console.log(req.session.logged_in);
+          console.log(req.session.user_id);
+          // res.json({ user: userData,logged_in: req.session.logged_in,message: 'You are now logged in!' });
+          res.status(200).json(userData);
+             });
+
+   
      
+        
+      
   
     } catch (err) {
       res.status(400).json(err);
@@ -72,9 +85,7 @@ router.post('/login', async (req, res) => {
   router.post('/saveSong',async(req,res)=>{
 
     try{
-  //   console.log(req.body);
-  //   res.status(200).json();
-  //  console.log(req.session.user_id)
+ 
 
    const data={
     "user_id":req.session.user_id,
@@ -86,6 +97,7 @@ router.post('/login', async (req, res) => {
    console.log("user route",libraryData);
    if(libraryData){
 
+  
      res.status(200).json({message:"Added the Song to the Library"});
     
    }

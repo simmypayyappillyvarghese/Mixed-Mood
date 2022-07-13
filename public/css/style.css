@@ -31,10 +31,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem;
-    padding: 1rem;
-    /* height:100vh; */
-    
+    margin: 1rem auto -30px;
+    padding: 1.3rem;
+    position: relative;
+    min-height:100%;
+    height:100%;
     
 }
 
@@ -158,11 +159,11 @@ form{
 
   #library-container{
 
-    flex:35% 1 1;
+    flex:30% 1 1;
   }
   #playlist-container{
 
-    flex:65% 1 2;
+    flex:70% 1 2;
   }
 
   #playlist-container li{
@@ -171,7 +172,7 @@ form{
     border-radius: 10px;
     
   }
-  .list-icons i{
+  i{
 
     padding: 0.6rem;
     cursor:grab;
@@ -189,26 +190,40 @@ form{
     width:50%; 
   }
 
-  #song-details span{
+  .song-details span{
 
     font-family: 'Courier New', Courier, monospace;
     margin: 0 1rem;
     text-transform: capitalize;
   }
 
-  #song-details span:nth-child(2){
+  .song-details span:nth-child(2){
 
     font-style: italic;
     margin-right: 0;
     padding-right: 0;
   }
 
+  /* html{
+/* 
+    position:relative;
+  } */ 
 
 
   footer{
 
     padding-bottom: 3rem;
     margin:3rem;
+    height:30px;
+    width:100%;
+    position: fixed;
+   
+    bottom:0;
+  }
+
+  main::after{
+    content:'';
+    clear:both;
   }
 
   .btn-group{
@@ -216,3 +231,115 @@ form{
     margin-top:20px;
   }
  
+  /*pointer events none will prevent any events on disabled icons*/
+i[disabled]{
+
+    color:#CD5C5C;
+    
+    pointer-events:none;
+    cursor: not-allowed; 
+
+}
+
+/* .savedSong{
+
+  color:#CD5C5C;
+    
+    pointer-events:none;
+    cursor: not-allowed;
+} */
+
+
+
+@media screen and (max-width:768px) {
+  
+
+/*search Box STyling*/
+.search {
+  position: relative;
+}
+
+/*Search Box length*/
+
+.search.is-search-open .search-input {
+  width: 200px;
+  color: #fff;
+}
+
+.search.is-search-open .search-input ~ .search-control {
+  z-index: 0;
+  cursor: pointer;
+}
+.search.is-search-open .search-input ~ .search-control::before {
+  transform: rotate(45deg);
+}
+.search.is-search-open .search-input ~ .search-control::after {
+  transform: rotate(-45deg) translateY(0);
+}
+
+.search-label {
+ 
+  font-style:italic;
+  letter-spacing: 1.4px;
+  color: #e5edf1;
+  font-size: 0.8rem;
+}
+
+.search-input {
+  width: 20px;
+  height: 40px;
+  padding: 10px 15px;
+  border: 4px solid #fff;
+  border-radius: 99px;
+  background: transparent;
+  color: transparent;
+  font-size: 1rem;
+  transition: 0.4s width ease, 0.4s color ease;
+}
+.search-input:focus {
+  outline: none;
+}
+
+.search-control {
+  position: absolute;
+  z-index: -1;
+  top: 60%;
+  right: 40%;
+  height: 15px;
+  width: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  transform: translateY(-30%);
+}
+.search-control::before, .search-control::after {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 20%;
+  width: 4px;
+  height: 100%;
+  border-radius: 99px;
+  background: #fff;
+  transition: 0.4s transform cubic-bezier(0.17, 0.67, 0.48, 1.34);
+  content: "";
+}
+.search-control::before {
+  transform: rotate(45deg) translateY(-25px) scaleY(0.01);
+}
+.search-control::after {
+  transform: rotate(-45deg) translateY(37px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+    
+}
+
+
+@media screen and (max-width:480px) {}
