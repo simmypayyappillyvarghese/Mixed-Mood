@@ -64,7 +64,7 @@
   <ul class="list-group px-3 mx-3" id="playlist-container">
     <div class="conatainer-fluid d-flex align-items-center justify-content-between py-3 px-5">
       <h6>Playlist</h6>
-      <i class="fa fa-refresh"></i>
+      <i class="fa fa-refresh" id="refresh-icon"></i>
     </div>
   {{#each songs as |song|}}
   <li class="list-group-item d-flex align-items-center justify-content-between song" data-media={{song.media_url}} data-id={{song.id}}>
@@ -100,4 +100,5 @@
 <script src="/js/play-song.js"></script>
 <script src="/js/add-song-library.js"></script>
 <script src="/js/mood.js"></script>
+<script src="/js/refresh.js"></script>
 {{/if}}
