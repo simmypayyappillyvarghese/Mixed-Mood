@@ -201,7 +201,15 @@ form{
     padding-right: 0;
   }
 
-
+  label[data-toggle="tooltip"] {
+    margin:0 2px;
+      
+  }
+  
+  img{
+    max-height: 100px;
+  }
+  
   footer{
 
     position: fixed;
@@ -215,7 +223,6 @@ form{
   }
 
   .btn-group{
-
     margin-top:20px;
     margin-right: 100px;
   }
@@ -318,7 +325,7 @@ i[disabled]{
 *::after {
   box-sizing: border-box;
 }
- 
+
 }
 
 

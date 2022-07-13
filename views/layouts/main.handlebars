@@ -17,10 +17,10 @@
 <body class="container-fluid  d-flex flex-column  align-self-center justify-content-between px-6 py-0">
   <header class="container-fluid  d-flex flex-column  align-self-center justify-content-between px-6 py-3">
     <nav class="container-fluid align-items-start d-flex justify-content-between px-6 py-3">
-            <h6>LOGO</h6>
+            <img id="logo-small" class="py-0" src="/images/mixed-mood_logo1.png" alt="logo">
             <h1 class="my-0">Mixed-Mood</h1>
           {{#if logged_in}}
-            <button class="btn" id="logout">Logout</button>
+            <button class="btn" class="py-0 " id="logout">Logout</button>
           {{/if}}
           {{#unless logged_in}}
             <button class="btn bg-transparent" id="logout"></button>
