@@ -139,7 +139,7 @@
         "album_name":"We the Best Forever",
         "artist_name":"DJ Khaled",
         "genre":"Hip-Hop",
-        "mood":"Pumped-Up",
+        "mood":"pumped-up",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525293/DJ_Khaled_-_Im_On_One_poue0p.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Im_On_One_u9mn5h.jpg"
     },
@@ -148,7 +148,7 @@
         "album_name":"DAMN.",
         "artist_name":"Kendrick Lamar",
         "genre":"Hip-Hop",
-        "mood":"Pumped-Up",
+        "mood":"pumped-up",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525293/DNA_-_Kendrick_Lamar_faeyxp.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/BNA_dnhk51.jpg"
     },
@@ -157,7 +157,7 @@
         "album_name":"Music Inspired by More than a Game",
         "artist_name":"Drake",
         "genre":"Hip-Hop",
-        "mood":"Pumped-Up",
+        "mood":"pumped-up",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Drake-Forever__jadqey.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Forever_eehomw.jpg"
     },
@@ -166,7 +166,7 @@
         "album_name":"",
         "artist_name":"Eminem",
         "genre":"Hip-Hop",
-        "mood":"Pumped-Up",
+        "mood":"pumped-up",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Eminem_-_Lose_Yourself_xmvga3.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Lose_Yourself_t12eap.jpg"
     },
@@ -175,7 +175,7 @@
         "album_name":"The Rising Tied",
         "artist_name":"Fort Minor",
         "genre":"Alternativve-Hip-Hop",
-        "mood":"Pumped-Up",
+        "mood":"pumped-up",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Fort_Minor_-_Remember_The_Name_qysmsi.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Fort_Minor_jqgrgp.jpg"
     },
