@@ -17,6 +17,7 @@ shuffleButton.addEventListener("click", (e) => {
   while (songArray.length > 0) {
     const randomIndex = Math.floor(Math.random() * songArray.length);
     const currentSong = songArray.splice(randomIndex, 1)[0];
+    console.log(currentSong)
     playList1.appendChild(currentSong);
   }
 });
