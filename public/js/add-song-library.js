@@ -1,5 +1,5 @@
 
-const myLibrary=[];
+//Adds selected song to the library and refresh homepage with library displaying added song
 
 const library=document.querySelector('.song-list-container');
 
@@ -10,8 +10,6 @@ async function addSongToLibrary(event){
        
         const songId=event.target.parentElement.parentElement.dataset.id;
        
-        console.log(event.target.disabled);
-
         const response=await fetch('/api/user/saveSong',
         {
             method:'POST',
@@ -19,13 +17,11 @@ async function addSongToLibrary(event){
             headers: { 'Content-Type': 'application/json' },
         });
 
-        console.log(response);
 
         if(response.ok){
             
             console.log("To do -Display the Success Message");
             window.location.replace('/home');
-            // event.target.classList.add('savedSong');
         }
         }
         else{

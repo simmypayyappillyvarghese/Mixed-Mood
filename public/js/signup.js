@@ -1,9 +1,11 @@
 const emailValidator=(input)=>{
 
-
     return input.match(/^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/);
-
 }
+
+//When User clicks on the sign up ,validates the input  
+//and make a post call to the signup route to create a user
+//and redirect to homepage 
 
 const signUpHandler = async (event) => {  
     event.preventDefault();

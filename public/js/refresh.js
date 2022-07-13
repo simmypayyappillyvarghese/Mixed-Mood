@@ -1,13 +1,4 @@
-// const refreshHandler = async (event) => {
-//     const temp = parsedSongList
-//     for(let i = temp.length -1; i>0;i--) {
-//       let j=Math.floor(Math.random()* (i + 1))
-//       [temp[i], temp[j]] = [temp[j], temp[i]];}
-//     parsedSongList = temp 
-    
-// }
-// const refreshElement= document.querySelector('#refresh-icon')
-// refreshElement.addEventListener("click",)
+// Refresh Icon will refresh the list of the songs from the search playslist
 
 const shuffleButton = document.querySelector("#refresh-icon");
 const playList1 = document.querySelector("#playlist-container");
@@ -21,3 +12,4 @@ shuffleButton.addEventListener("click", (e) => {
     playList1.appendChild(currentSong);
   }
 });
+
