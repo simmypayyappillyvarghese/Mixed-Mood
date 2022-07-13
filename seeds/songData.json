@@ -1,12 +1,227 @@
 [
     {
-      "song_title":"A view from the Vale",
-      "album_name":"glass violet",
-      "artist_name":"test",
-       "genre":"country",
-       "mood":"happy",
-       "media_url":"https://res.cloudinary.com/dw5h7wsq9/video/upload/v1657500568/Glass_Violet_-_A_View_From_The_Vale_njbqwk.mp3",
-       "media_image":"https://res.cloudinary.com/dw5h7wsq9/image/upload/v1657500668/music_image_1_pqynx0.avif"
-
+        "song_title":"Bleed It Out",
+        "album_name":"Minutes To Midnight",
+        "artist_name":"Linkin Park",
+        "genre":"Rap-Rock",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525289/Bleed_It_Out_-_Linkin_Park_r5f6it.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/Bleed_It_Out_sk3oml.jpg"
+    },
+    {
+        "song_title":"Down With The Sickness",
+        "album_name":"The Sickness",
+        "artist_name":"Disturbed",
+        "genre":"Nu-Metal",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525289/Disturbed_-_Down_With_The_Sickness_ey4eyt.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/Down_With_The_Sickness_htusov.jpg"
+    },
+    {
+        "song_title":"The Pretender",
+        "album_name":"Echoes, Silence, Patience & Grace",
+        "artist_name":"The Foo Fighters",
+        "genre":"Hard Rock",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525289/Foo_Fighters_-_The_Pretender_ylnjnu.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/The_Pretender_iejdzt.jpg"
+    },
+    {
+        "song_title":"Nero Forte",
+        "album_name":"We Are Not Your Kind",
+        "artist_name":"Slipknot",
+        "genre":"Nu-Metal",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525289/Slipknot_-_Nero_Forte_wqbjex.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/Nero_Forte_mowsbe.jpg"
+    },
+    {
+        "song_title":"Break",
+        "album_name":"Life Starts Now",
+        "artist_name":"Three Days Grace",
+        "genre":"Alternative metal",
+        "mood":"anger",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525290/Three_Days_Grace_-_Break_Official__getmp3.pro_fi4iug.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/Break_xgqga7.jpg"
+    },
+        {
+        "song_title":"Can't Stop the Feeling!",
+        "album_name":"Trolls: Original Motion Picture Soundtrack",
+        "artist_name":"Justin Timberlake",
+        "genre":"Disco-Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525289/Can_t_Stop_the_Feeling_bel3rz.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531098/Can_t_Stop_The_Feeling_y2wvqf.jpg"
+    },
+    {
+        "song_title":"Uptown Funk",
+        "album_name":"Uptown Special",
+        "artist_name":"Mark Ronson",
+        "genre":"Funk-Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525290/Mark_Ronson_-_Uptown_Funk_ft._Bruno_Mars_f0fskb.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/UpTown_Funk_ydpg0t.jpg"
+    },
+    {
+        "song_title":"Girls Like You",
+        "album_name":"Red Pill Blues",
+        "artist_name":"Maroon 5",
+        "genre":"Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525290/Maroon_5_-_Girls_Like_You_ft._Cardi_B_peazwh.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Girls_Like_You_kn7iz1.jpg"
+    },
+    {
+        "song_title":"Happy",
+        "album_name":"Girl",
+        "artist_name":"Pharrell Williams",
+        "genre":"Soul",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525290/Pharrell_Williams_-_Happy_cdwcfm.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Happy_khfjes.jpg"
+    },
+    {
+        "song_title":"International Love",
+        "album_name":"Planet Pit",
+        "artist_name":"Pitbull",
+        "genre":"Dance-Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525291/Pitbull_-_International_Love_ft._Chris_Brown_vyznm6.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Happy_khfjes.jpg"
+    },
+    {
+        "song_title":"Rocketeer",
+        "album_name":"Free Wired",
+        "artist_name":"Far East Movement",
+        "genre":"Pop-Rap",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525291/Far_East_Movement-Rocketeer_pebjnr.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Rockateer_yx9wkd.jpg"
+    },
+    {
+        "song_title":"Forever",
+        "album_name":"What is Love?",
+        "artist_name":"Juice Wrld",
+        "genre":"Freestyle-Rap",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525291/Forever-Juice_Wrld_yukj6r.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Forever_Juice_Wrld_lolxrj.jpg"
+    },
+    {
+        "song_title":"Stereo Hearts",
+        "album_name":"THe Papercut Chronicles II",
+        "artist_name":"Gym Class Heroes",
+        "genre":"Alternative Rock",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525293/Gym_Class_Heroes_Stereo_Hearts_ft_Adam_Levine_irjqia.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Stereo_Hearts_babaz0.jpg"
+    },
+    {
+        "song_title":"Power Trip",
+        "album_name":"Born Sinner",
+        "artist_name":"J. Cole",
+        "genre":"Hip-Hop",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525292/Power_Trip_d28il9.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Power_Trip_mx7nol.jpg"
+    },
+    {
+        "song_title": "Til The End Of Time",
+        "album_name":"A Love Letter to You 4",
+        "artist_name":"Trippie Redd",
+        "genre":"Hip-Hop",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525292/Til_The_End_of_Time_esutvj.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Til_The_End_Of_Time_xjitzw.jpg"
+    },
+    {
+        "song_title":"I'm On One",
+        "album_name":"We the Best Forever",
+        "artist_name":"DJ Khaled",
+        "genre":"Hip-Hop",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525293/DJ_Khaled_-_Im_On_One_poue0p.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Im_On_One_u9mn5h.jpg"
+    },
+        {
+        "song_title":"DNA",
+        "album_name":"DAMN.",
+        "artist_name":"Kendrick Lamar",
+        "genre":"Hip-Hop",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525293/DNA_-_Kendrick_Lamar_faeyxp.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/BNA_dnhk51.jpg"
+    },
+    {
+        "song_title":"Forever",
+        "album_name":"Music Inspired by More than a Game",
+        "artist_name":"Drake",
+        "genre":"Hip-Hop",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Drake-Forever__jadqey.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531099/Forever_eehomw.jpg"
+    },
+    {
+        "song_title":"Lose Yourself",
+        "album_name":"",
+        "artist_name":"Eminem",
+        "genre":"Hip-Hop",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Eminem_-_Lose_Yourself_xmvga3.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Lose_Yourself_t12eap.jpg"
+    },
+    {
+        "song_title":"Remember the Name",
+        "album_name":"The Rising Tied",
+        "artist_name":"Fort Minor",
+        "genre":"Alternativve-Hip-Hop",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Fort_Minor_-_Remember_The_Name_qysmsi.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Fort_Minor_jqgrgp.jpg"
+    },
+    {
+        "song_title":"Can You Feel My Heart",
+        "album_name":"Sempiternal",
+        "artist_name":"Bring Me The Horizon",
+        "genre":"Alternative",
+        "mood":"sad",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525294/Bring_Me_The_Horizon_-_Can_You_Feel_zo47tu.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Can_You_Feel_smh4hj.jpg"
+    },
+    {
+        "song_title":"Falling Down ",
+        "album_name":"Comme Over When You're Sober, Pt.2(Bonus)",
+        "artist_name":"Lil Peep",
+        "genre":"Alternative",
+        "mood":"sad",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525296/Lil_Peep_XXXTENTACION_-_Falling_Down_kasauj.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Falling_Down_bruh8p.jpg"
+    },
+    {
+        "song_title":"Otherside",
+        "album_name":"beerbongs & bentleys",
+        "artist_name":"Post Malone",
+        "genre":"Hip-Hop",
+        "mood":"sad",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525295/Post_Malone-Otherside_gr4uu0.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Otherside_gf5c4b.jpg"
+    },
+    {
+        "song_title":"Afraid",
+        "album_name":"I Love You.",
+        "artist_name":"The Neighbourhood",
+        "genre":"Alternative",
+        "mood":"sad",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525296/The_Neighbourhood-Afraid_gnbw7p.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Afraid_gokvdr.jpg"
+    },
+    {
+        "song_title":"Faith",
+        "album_name":"After Hours",
+        "artist_name":"The Weeknd",
+        "genre":"Soul",
+        "mood":"sad",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657525296/The_Weeknd_-Faith_f2a8n6.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657531100/Faith_dwue7d.jpg"
     }
-]    
+]

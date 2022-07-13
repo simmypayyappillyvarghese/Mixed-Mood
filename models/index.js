@@ -1,11 +1,6 @@
-
 const User=require('./User');
 const Song=require('./Song');
 const Library=require('./Library');
-
-
-//Add the relation between the tables
-
 
 User.belongsToMany(Song,{
 
@@ -16,8 +11,6 @@ User.belongsToMany(Song,{
     as:'user_song_list'
   });
   
-  // Tags belongToMany Products (through ProductTag)
-  
   Song.belongsToMany(User,{
   
     through:{
@@ -26,5 +19,6 @@ User.belongsToMany(Song,{
     },
     as:'song_of_users'
   });
+
 
 module.exports={User,Song,Library};

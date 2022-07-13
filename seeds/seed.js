@@ -15,7 +15,6 @@ const seedDatabase = async () => {
   });
 
   //Bulk Create for song data
-
   await Song.bulkCreate(songData, {
     individualHooks: true,
     returning: true,

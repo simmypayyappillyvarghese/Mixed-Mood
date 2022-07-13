@@ -1,22 +1,103 @@
-<div class="pt-5 pb-5">
+ <!--Font Awesome Icon-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="d-flex align-items-center justify-content-between flex-wrap px-5 mx-5 mb-3">
+
+<!--Radio Button-->
+ <div class="btn-group px-5">
+    <input value="anger" type="radio" class="btn-check" name="options" id="option1" autocomplete="off"/>
+    <label class="btn btn-dark" for="option1">😠</label>
+
+    <input value="happy" type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+    <label class="btn btn-dark" for="option2">😀</label>
+
+    <input value="love" type="radio" class="btn-check" name="options" id="option3" autocomplete="off" />
+    <label class="btn btn-dark" for="option3">💖</label>
+
+    <input value="pumped-up" type="radio" class="btn-check" name="options" id="option4" autocomplete="off" />
+    <label class="btn btn-dark" for="option4">💪🏻</label>
+
+    <input value="sad" type="radio" class="btn-check" name="options" id="option5" autocomplete="off" />
+    <label class="btn btn-dark" for="option5">😔</label>
+  </div>
+
+
+<!--Search Box Component-->
+
+<div class="py-4 px-5">
 <div class="search" data-search>
-  <label for="search" class="search-label">search</label>
+  <label for="search" class="search-label">Search For the songs by Artist</label>
   <input id="search" class="search-input" data-search-input>
   <button class="search-control" data-search-control aria-label="clear search"></button>
 </div>
 </div>
-<div>
-  {{#each songs as |song|}}
-    <div>
 
-      <audio controls>
-  <source src={{song.media_url}} type="audio/ogg">
-  <source src={{song.media_url}}  type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-    </div>
-  {{/each}}
 </div>
- {{#if logged_in}}
+
+
+
+<!--Library  Component-->
+<div class="container-fluid d-flex flex-column align-items-center justify-content-between">
+<div class="container-fluid d-flex justify-content-center align-items-start px-4  flex-wrap-sm my-1" id="library-playlist-container">
+  <div class="px-4  py-3 mx-5 my-2" id="library-container">
+      <h6>My Library</h6>
+      <div class="song-list-container">
+        <ul class="mt-4">
+        {{#each parsedSongList as |songList|}}
+        <li class="list-group-item py-1" data-media={{songList.media_url}}>
+          <div class="d-flex align-items-center justify-content-between">
+              <img src={{songList.media_image}} alt="Media Image" id="media-image">  
+              <small class="text-dark text-center d-flex flex-wrap">{{songList.song_title}}</small>&hyphen;
+              <small class="text-dark text-center d-flex flex-wrap">{{songList.artist_name}}</small>
+              <div class="d-flex align-items-center justify-content-between">
+                <i class="fa fa-play play-icon px-3 fa-play-library"></i>
+                <i class="fa fa-trash"></i>
+              </div>
+          </div>
+        </li>
+        {{/each}}
+        </ul>
+      </div>
+  </div>
+
+  <!--Playlist Component-->
+  <ul class="list-group px-3 mx-3" id="playlist-container">
+    <div class="conatainer-fluid d-flex align-items-center justify-content-between py-3 px-5">
+      <h6>Playlist</h6>
+      <i class="fa fa-refresh"></i>
+    </div>
+  {{#each songs as |song|}}
+  <li class="list-group-item d-flex align-items-center justify-content-between song" data-media={{song.media_url}} data-id={{song.id}}>
+  <img src={{song.media_image}} alt="Media Image" id="media-image">  
+  <div class="d-flex align-items-center justify-content-between flex-wrap-md song-details">
+  <span class="text-dark">{{song.song_title}}</span>
+  <span class="text-dark">{{song.album_name}}</span>
+  <span class="text-dark">{{song.artist_name}}</span>
+  </div>
+  <div class="list-icons d-flex align-items-center justify-content-between">
+    <i class="fa fa-heart" class="save-icon" {{song.disabled}}> Save </i>
+    <i class="fa fa-play" class="play-icon"> Play </i>
+    <i class="fa fa-align-left" class="lyrics-icon"> Lyrics </i>
+  </div>
+</li>
+  {{/each}}
+  </ul>
+</div>
+
+  <!--Audio Element Componet-->
+<div class="container-fluid d-flex justify-content-center align-items-end px-4 my-5 py-5" id="audio-container">
+  <audio  id="audio-element" controls>
+  <source type="audio/ogg" id="audio-source">
+  Your browser does not support the audio element.
+ </audio>
+</div>
+
+</div>
+
+
+{{#if logged_in}}
 <script src="/js/search-box.js"></script>
+<script src="/js/play-song.js"></script>
+<script src="/js/add-song-library.js"></script>
+<script src="/js/mood.js"></script>
 {{/if}}

@@ -39,6 +39,9 @@ http://localhost:3001/signup   :  Directs the Page to SignUp form Page ,When use
 http://localhost:3001/signup   :  If User enter credential and enter Submit Button ,Directs the Page to Home Page(http://localhost:3001/home) wih logout button
                                 
 
+http://localhost:3001/search/<searchtext> : Update the homepage with the search result
+
+# Test 
 ### Technologies/Packages Used
 
 
