@@ -147,7 +147,7 @@ const searchData=await Song.findAll({
 if(searchData){
 
 //Serializing the Search Data
-  songs=searchData.map((data)=>{return data.get({plain:true})});
+  const songs=searchData.map((data)=>{return data.get({plain:true})});
 
    res.render('homepage',{songs,logged_in:req.session.logged_in});
 }

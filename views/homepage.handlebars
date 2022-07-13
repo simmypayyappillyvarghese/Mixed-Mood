@@ -38,17 +38,20 @@
 <!--Library  Component-->
 <div class="container-fluid d-flex flex-column align-items-center justify-content-between">
 <div class="container-fluid d-flex justify-content-center align-items-start px-4 flex-wrap-sm my-2" id="library-playlist-container">
-  <div class="px-3  py-2 mx-5 my-2" id="library-container">
+  <div class="px-4  py-3 mx-5 my-2" id="library-container">
       <h6>My Library</h6>
       <div class="song-list-container">
         <ul class="mt-4">
         {{#each parsedSongList as |songList|}}
-        <li class="list-group-item py-2">
-          <div class="d-flex align-items-center justify-content-between flex-wrap-md">
+        <li class="list-group-item py-1" data-media={{songList.media_url}}>
+          <div class="d-flex align-items-center justify-content-between">
               <img src={{songList.media_image}} alt="Media Image" id="media-image">  
-              <span class="text-dark flex-wrap">{{songList.song_title}}</span>
-              <small class="text-dark">{{songList.artist_name}}</small>
-              <i class="fa fa-play" class="play-icon">Play</i>
+              <small class="text-dark text-center d-flex flex-wrap">{{songList.song_title}}</small>&hyphen;
+              <small class="text-dark text-center d-flex flex-wrap">{{songList.artist_name}}</small>
+              <div class="d-flex align-items-center justify-content-between">
+                <i class="fa fa-play play-icon px-3 fa-play-library"></i>
+                <i class="fa fa-trash"></i>
+              </div>
           </div>
         </li>
         {{/each}}
@@ -58,22 +61,22 @@
 
   <!--Playlist Component-->
   <ul class="list-group px-3 mx-3" id="playlist-container">
-    <div class="d-flex align-items-center justify-content-between flex-wrap p-3">
+    <div class="d-flex align-items-center justify-content-between flex-wrap py-4 px-5">
       <h6>Playlist</h6>
       <i class="fa fa-refresh"></i>
     </div>
   {{#each songs as |song|}}
   <li class="list-group-item d-flex align-items-center justify-content-between" data-media={{song.media_url}} data-id={{song.id}} id="music-list">
   <img src={{song.media_image}} alt="Media Image" id="media-image">  
-  <div class="d-flex align-items-start justify-content-betwen flex-wrap-md" id="song-details">
+  <div class="d-flex align-items-center justify-content-between flex-wrap-md" id="song-details">
   <span class="text-dark">{{song.song_title}}</span>
   <span class="text-dark">{{song.album_name}}</span>
   <span class="text-dark">{{song.artist_name}}</span>
   </div>
   <div class="list-icons d-flex align-items-center justify-content-between">
-    <i class="fa fa-heart" class="save-icon">Save</i>
-    <i class="fa fa-play" class="play-icon"> Play</i>
-    <i class="fa fa-align-left" class="lyrics-icon"> Lyrics</i>
+    <i class="fa fa-heart" class="save-icon"> Save </i>
+    <i class="fa fa-play" class="play-icon"> Play </i>
+    <i class="fa fa-align-left" class="lyrics-icon"> Lyrics </i>
   </div>
 </li>
   {{/each}}
