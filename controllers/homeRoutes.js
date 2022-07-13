@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const {Song, User , Library}=require('../models');
 const {Op}=require('sequelize');
+const { parse } = require('dotenv');
 
 
 
@@ -106,7 +107,7 @@ const userData=await User.findAll({
 console.log("----------------------------");
 console.log(userData);
 
-const songList=userData.map((data)=>data.get({plain:true}));
+let songList=userData.map((data)=>data.get({plain:true}));
 
 
 console.log("-----------------------------");
@@ -114,7 +115,14 @@ console.log("-----------------------------");
 
 console.log(songList);
 console.log(songList[0].user_song_list);
+
 const parsedSongList=songList[0].user_song_list;
+
+const temp = parsedSongList
+for(let i = temp.length -1; i>0;i--) {
+  let j=Math.floor(Math.random()* (i + 1))
+  [temp[i], temp[j]] = [temp[j], temp[i]];}
+parsedSongList = temp 
 
 
 if(userData){
