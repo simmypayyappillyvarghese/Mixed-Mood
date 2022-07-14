@@ -430,7 +430,174 @@
         "mood":"happy",
         "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Kool_The_Gang_-_Ladies_Night_wcjqwf.mp3",
         "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657737198/Kool_and_the_Gang_Cover_x527l7.jpg"
-    }
+    },
     
+    {
+        "song_title":"American Boy",
+        "album_name":"Americon Boy",
+        "artist_name":"Estelle",
+        "genre":"Rap",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727537/Estelle_-_American_Boy_Feat._Kanye_jwcyxs.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657747404/American_boy_cover_shffdi.jpg"
+    },
+    {
+        "song_title":"Pattry Cake",
+        "album_name":"Painting Pictures",
+        "artist_name":"Kodak Black",
+        "genre":"Rap",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727538/Kodak_Black_-_Patty_Cake_i24fku.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657747404/Patty_Cake_Cover_onvylc.jpg"
+    }, 
+    {
+        "song_title":"One More Time",
+        "album_name":"Discovery",
+        "artist_name":"Daft Punk",
+        "genre":"House",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727538/Daft_Punk_-_One_More_Time_Official_Video_lvnmqk.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657747404/One_more_time_cover_smdxvg.jpg"
+    },
+    {
+        "song_title":"You Makem My Dreams Come True",
+        "album_name":"Hall & Oats Greatest Hits",
+        "artist_name":"Hall & Oats",
+        "genre":"Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727539/You_Make_My_Dreams_-_Hall_Oats_ya1ekw.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657747404/Hall_and_Oatts_cover_kltnbv.jpg"
+    }, {
+        "song_title":"Those Days",
+        "album_name":"EP-1",
+        "artist_name":"Amtrac",
+        "genre":"House",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657727539/Those_Days_Viceroy_Remix_khn7wu.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657747404/artworks-000033579318-51t4x7-t500x500_adwt7d.jpg"
+    }, {
+        "song_title":"Dilemma ",
+        "album_name":"Kelly",
+        "artist_name":"Kelly Rowland",
+        "genre":"Pop",
+        "mood":"happy",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657782151/Nelly_-_Dilemma_messj1.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657782151/Nelly_Cover_fkntrc.jpg"
+    }, {
+        "song_title":"Wanna Sex U Up",
+        "album_name":"C.M.B.",
+        "artist_name":"Color Me Bad",
+        "genre":"Pop",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824076/I_Wanna_Sex_You_Up_Single_Mix_pn8vep.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824075/I_wanna_sex_u_up_Cover_g1s0vf.jpg"
+    }, {
+        "song_title":"What You Need",
+        "album_name":"The Weeknd-Trilogy",
+        "artist_name":"The Weeknd",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824077/The_Weeknd_-_What_You_Need_hrmlrr.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824076/The_weeknd_cover_ryzmwv.jpg"
+    }, {
+        "song_title":"Lay It Down",
+        "album_name":"King/Hearts",
+        "artist_name":"Lloyd",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824077/Lloyd_-_Lay_It_Down_lyrics_.flv_uabyw9.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824075/llyod_cover_fgzhlq.jpg"
+    }, {
+        "song_title":"Fortunate",
+        "album_name":"Fortunate - Single",
+        "artist_name":"Maxwell",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824078/Maxwell_-_Fortunate_njtacg.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824077/Maxwell_Cover_ndb2fm.jpg"
+    },
+    {
+        "song_title":"So Anxious",
+        "album_name":"100% Genuine",
+        "artist_name":"Genuine",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824077/So_Anxious_-_Ginuwine_thoezg.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824076/anxioius_cover_szf7be.jpg"
+    },{
+        "song_title":"Planez",
+        "album_name":"Late Nights",
+        "artist_name":"Jeremih",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824076/Planez_bk6vg7.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824075/Planez_cover_o6s8he.jpg"
+    },{
+        "song_title":"Too Deep",
+        "album_name":"Sept 7th",
+        "artist_name":"Dvsn",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824077/dvsn_-_Too_Deep_hfwj95.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824076/dvsn_cover_luo2ax.jpg"
+    },
+    {
+        "song_title":"Exchange",
+        "album_name":"Trap Soul",
+        "artist_name":"Bryson Tiller",
+        "genre":"R&B",
+        "mood":"love",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657824077/Bryson_Tiller_-_Exchange_dpx5kn.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657824078/Trap_Soul_u3jct5.png"
+    },
+    {
+        "song_title":"Ruff Ryders Anthem",
+        "album_name":"Single",
+        "artist_name":"DMX",
+        "genre":"Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657826549/02_Ruff_Ryders_Anthem_-_DMX_koshda.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657826619/dmc_cover_al3hbk.jpg"
+    },
+    {
+        "song_title":"Mo Bamba",
+        "album_name":"Single",
+        "artist_name":"Sheck Wes",
+        "genre":"Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657826549/Sheck_Wes_-_Mo_Bamba_wqukox.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657826549/Mo_Bama_Cover_ypnatl.jpg"
+    },{
+        "song_title":"Stunntin' Like My Daddy",
+        "album_name":"Single",
+        "artist_name":"Lil Wayne",
+        "genre":"Rap",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657826549/Stuntin_Like_My_Daddy_-_Lil_Wayne_Feat._Bird_Man_eklsnm.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657826550/Stuntin_cover_eg3pnk.jpg"
+    },{
+        "song_title":"Harlem Shake",
+        "album_name":"Single",
+        "artist_name":"Baauer",
+        "genre":"EDM",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657826550/Baauer_-_Harlem_Shake_Official_Audio_jxpq1r.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657826553/Baaauer_Cover_fdoxfj.jpg"
+    },{
+        "song_title":"Bass Down Low",
+        "album_name":"Single",
+        "artist_name":"Dev",
+        "genre":"EDM",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657826551/DEV_-_Bass_Down_Low_Explicit_ft._The_Cataracs_z5j4v9.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657826549/Dev_cover_t63ufz.jpg"
+    },{
+        "song_title":"Like a G6",
+        "album_name":"Single",
+        "artist_name":"Far East Movement",
+        "genre":"EDM",
+        "mood":"pumped-up",
+        "media_url":"https://res.cloudinary.com/dbpaddidz/video/upload/v1657826551/LIKE_A_G6__OFFICIAL_FAR_EAST_MOVEMENT_doblfh.mp3",
+        "media_image":"https://res.cloudinary.com/dbpaddidz/image/upload/v1657826549/like_a_G6_cover_sahz6f.jpg"
+    }
 ]
-

@@ -85,10 +85,16 @@ ROUTES:
     * MYSQL2
     * BCRYPT
 
+* New Technology
+    * Cloudinary    
+
 <br>
 
 ### Links
 
+Heroku Login : https://classique-croissant-67132.herokuapp.com/
+
+Github LInk :https://github.com/Jesus-Villegas/Mixed-Mood
 
 <br>
 
