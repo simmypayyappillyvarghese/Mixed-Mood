@@ -10,10 +10,10 @@ async function addSongToLibrary(event){
        
         const songId=event.target.parentElement.parentElement.dataset.id;
        
-        const response=await fetch('/api/user/saveSong',
-        {
+       
             method:'POST',
-            body:JSON.stringify({songId}),
+            body:JSON.stringify({songId}), const response=await fetch('/api/user/saveSong',
+        {
             headers: { 'Content-Type': 'application/json' },
         });
 
