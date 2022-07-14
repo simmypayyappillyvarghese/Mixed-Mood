@@ -85,6 +85,9 @@ ROUTES:
     * MYSQL2
     * BCRYPT
 
+* NEW -TECHNOLOGY    
+    * CLOUDINARY
+
 <br>
 
 ### Links
@@ -106,7 +109,7 @@ Screenshot of Login form
 <br>
 
 
-![login form screenshot](./public/images/login-form.png)
+![login form screenshot](./public/images/login-form-updated.png)
 
 Screenshot of Signup form
 
@@ -114,6 +117,8 @@ Screenshot of Signup form
 <br>
 
 ![sign up form screenshot](./public/images/signup-form.png)
+
+
 
 ### References
 
