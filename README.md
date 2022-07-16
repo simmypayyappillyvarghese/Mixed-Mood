@@ -23,12 +23,12 @@ As a music lover, I want to be given the option to play my music,based on the mo
 <br>
 
 GIVEN a vibez web application with search options
-*   WHEN I sign up/log in THEN I am presented with a homepage with radio button with mood option.
+*   WHEN I sign up/log in THEN I am presented with a homepage with radio button with mood option and search bar to search for the artist name.
 *   WHEN I select the mood radio button THEN I am given a suggested playlist based on the mood
-*   WHEN presented with the playlist  THEN I go through it
 *   WHEN I get presented with songs If I don’t like THEN I click a refresh button and get presented with a new playlist 
-*   WHEN I do get presented with songs I do like THEN I am able to add it to the library and listen to it and View the lyrics
-*   WHEN I want to search up the songs based on artist name, album, genre THEN I will be presented with the related songs 
+*   WHEN I search for the songs with artist name THEN I am given a suggested playlist based on artist name
+*.  WHEN I am presented with the playlist I Am able to play the songs ,add it to the library and View the lyrics
+
 
 <br>
 
